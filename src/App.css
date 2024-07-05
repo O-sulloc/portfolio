@@ -6,6 +6,44 @@
   align-items: center;
 }
 
+.blob {
+  position: absolute;
+  opacity: 0.5;
+  width: 400px;
+  aspect-ratio: 1/1;
+  animation: animate 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
+    alternate forwards;
+  filter: blur(40px);
+  z-index: -1;
+  background: linear-gradient(
+    47deg,
+    rgba(255, 88, 139, 1) 21%,
+    rgb(0 164 173) 67%,
+    rgba(118, 74, 166, 1) 81%
+  )
+}
+
+@keyframes animate {
+  0% {
+    translate: 40% -25%;
+    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
+  }
+  50% {
+    translate: 0% 13%;
+    border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
+    rotate: 41deg;
+    scale: 1.15;
+  }
+  100% {
+    translate: -45% 39%;
+    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
+    rotate: -60deg;
+    scale: 1.05;
+  }
+}
+
+/* blobk end */
+
 .nav-container {
   display: flex;
   justify-content: space-between;
@@ -133,3 +171,35 @@
 
 
 /* timeline card */
+
+
+/* ============ proejct css ============ */
+.project-section {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.project-section h1 {
+  font-size: 3em;
+}
+
+.project-container {
+  display: grid;
+  grid-gap: 50px;
+  grid-template-columns: repeat(2, 1fr)
+  /* display: flex;
+  flex-wrap: wrap;
+  gap: 20px; */
+}
+
+/* project card */
+.project-wrapper {
+  border-color: black;
+  border-style: dotted;
+}
+
+.project-wrapper .project-thumb {
+  width: 100%;
+  /* height: auto; */
+}

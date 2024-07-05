@@ -13,6 +13,8 @@ const App = () => {
 
   return (
     <div className="container">
+      <div className='blob'>
+      </div>
       <Navbar />
       <Home />
       <Stack />
