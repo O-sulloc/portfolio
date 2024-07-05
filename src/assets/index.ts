@@ -1,3 +1,3 @@
-import me from "./me.png";
+import Me from "./me.png";
 
-export default me;
+export default { Me };
