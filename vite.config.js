@@ -1,12 +1,18 @@
-// @ts-check
-import reactPlugin from 'vite-plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
 /**
  * @type { import('vite').UserConfig }
  */
-const config = {
-  jsx: 'react',
-  plugins: [reactPlugin]
-}
+const config = defineConfig({
+  plugins: [react()],
+  optimizeDeps: {
+    include: [
+      "@mui/material",
+      "@mui/icons-material",
+      "@mui/utils"
+    ]
+  }
+});
 
-export default config
+export default config;
