@@ -1,16 +1,19 @@
 import React from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import '@fortawesome/free-regular-svg-icons'
+import { IconDefinition } from '@fortawesome/free-regular-svg-icons';
 
 type StackCardProps = {
-  icon: string,
+  iconName: IconDefinition,
   title: string,
   desc: string,
   stackList: string,
 }
 
-const StackCard = ({ icon, title, desc, stackList }: StackCardProps) => {
+const StackCard = ({ iconName, title, desc, stackList }: StackCardProps) => {
   return (
     <div className='stack-wrapper'>
-      <img src={icon} className='stack-icon' />
+      <FontAwesomeIcon icon={iconName} size='3x' className='stack-icon' />
       <h3 className='stack-title'> {title} </h3>
       <p className='stack-desc'> {desc} </p>
       <span className='stack-list'> {stackList} </span>
