@@ -11,7 +11,7 @@ import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import TranslateIcon from '@mui/icons-material/Translate';
 
-const pages = ['Home', 'Stack', 'Experience', 'Project', 'Contact'];
+const pages = ['home', 'stack', 'experience', 'project', 'contact'];
 
 const ResponsiveNavBar = () => {
 
@@ -29,7 +29,7 @@ const ResponsiveNavBar = () => {
       <List>
         {pages.map((page) => (
           <ListItem key={page} disablePadding>
-            <ListItemButton>
+            <ListItemButton component='a' href={`#${page}-section`} >
               <ListItemText primary={page} />
             </ListItemButton>
           </ListItem>
@@ -39,17 +39,19 @@ const ResponsiveNavBar = () => {
   );
 
   return (
-    <AppBar position="static">
+    <AppBar position="sticky" className='navigation-bar'>
       <Container maxWidth="xl" >
         <Toolbar disableGutters>
           
           {/* PC Navbar */}
           {/* icon */}
-          <Box sx={{ 
-            flexGrow: {
-              xs: 0, // mobile
-              md: 1, // pc
-            },
+          <Box 
+            sx={{ 
+              flexGrow: {
+                xs: 0, // mobile
+                md: 1, // pc
+              },
+
           }}>
             <IconButton aria-label='light-mode-icon' size='large'>
               <DarkModeIcon />
@@ -63,7 +65,8 @@ const ResponsiveNavBar = () => {
             {pages.map((page) => (
               <Button
                 key={page}
-                sx={{ my: 2, color: 'white', display: 'block', textTransform: 'capitalize' }}
+                href={`#${page}-section`}
+                sx={{ my: 2, color: 'black', display: 'block', textTransform: 'capitalize' }}
               >
                 {page}
               </Button>
@@ -79,7 +82,8 @@ const ResponsiveNavBar = () => {
               onClick={toggleDrawer(true)}
               color="inherit"
             >
-              <MenuIcon />
+              {/* <MenuIcon sx={{ color: black[500] }}/> */}
+              <MenuIcon color='disabled' />
             </IconButton>
             <Drawer
               open={open}

@@ -5,7 +5,7 @@ import { faJs, faAws, faGitAlt } from '@fortawesome/free-brands-svg-icons';
 const Stack = () => {
   return (
     <>
-      <section className="stack-section" id='stack'>
+      <section className="stack-section" id='stack-section'>
         <h1>stack</h1>
         <div className='stack-container'>
           <StackCard

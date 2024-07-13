@@ -5,7 +5,7 @@ import ExperienceCard from '../common/ExperienceCard';
 const Experience = () => {
   return (
     <>
-      <div className="experience">
+      <div className="experience-section" id='experience-section'>
         <h1>experience</h1>
         <VerticalTimeline
           animate={ true }
