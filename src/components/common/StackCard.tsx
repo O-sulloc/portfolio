@@ -2,12 +2,13 @@ import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '@fortawesome/free-regular-svg-icons'
 import { IconDefinition } from '@fortawesome/free-regular-svg-icons';
+import { Chip, Stack } from '@mui/material';
 
 type StackCardProps = {
   iconName: IconDefinition,
   title: string,
   desc: string,
-  stackList: string,
+  stackList: string[],
 }
 
 const StackCard = ({ iconName, title, desc, stackList }: StackCardProps) => {
@@ -16,34 +17,24 @@ const StackCard = ({ iconName, title, desc, stackList }: StackCardProps) => {
       <FontAwesomeIcon icon={iconName} size='3x' className='stack-icon' />
       <h3 className='stack-title'> {title} </h3>
       <p className='stack-desc'> {desc} </p>
-      <span className='stack-list'> {stackList} </span>
+      <Stack direction="row" spacing={0.5} className='stack-list-wrapper' 
+        // sx={{
+        //   '& .MuiStack-root': { marginBottom: '10px' }
+        // }}
+      >
+        {stackList.map((stack) => (
+          <Chip 
+            key={stack}
+            label={stack}
+            sx={{ 
+              textTransform: 'capitalize',
+              '& .MuiChip-root': { marginBottom: '10px !important' }
+            }} 
+          />
+        ))}
+      </Stack>
     </div>
   )
 }
-
-const stackFirst = [
-  "Ruby",
-  "Ruby On Rails",
-  "Java",
-  "Spring Boot",
-  "JavaScript",
-  "TypeScript",
-  "Svelte",
-  "React",
-  "Oracle",
-  "MySQL",
-  "PostgreSQL",
-  "Postman"
-]
-
-const StackSecond = [
-  "Git",
-  "GitHub Actions",
-  "GitLab CI/CD",
-  "AWS",
-  "Docker",
-  "Kubernetes",
-  "Linux",
-]
 
 export default StackCard;

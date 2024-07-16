@@ -12,22 +12,22 @@ const Stack = () => {
             iconName={faJs} 
             title={'Full Stack Web Development'} 
             desc={'I have built a diverse array of web applications from scratch using modern technologies such as Java and React.'}
-            stackList={'Java, javascript'} 
-            
+            // stackList={['Java', 'JavaScript', 'Ruby', 'postgreSQL',]}
+            stackList={['Java', 'JavaScript', 'Ruby', 'postgreSQL', 'oracle', 'mySQL', 'Kubernetes', 'jenkins']}
+          />
+          
+          <StackCard
+            iconName={faJs} 
+            title={'Full Stack Web Development'} 
+            desc={'I have built a diverse array of web applications from scratch using modern technologies such as Java and React.'}
+            stackList={['Java', 'JavaScript', 'Ruby', 'postgreSQL', 'oracle', 'mySQL', 'Kubernetes', 'jenkins']}
           />
 
           <StackCard 
             iconName={faAws} 
             title={'DevOps'} 
             desc={'Experience with Docker, Kubernetes, and CI/CD pipelines.'}
-            stackList={'Docker, Kubernetes, Jenkins'}
-          />
-
-          <StackCard 
-            iconName={faGitAlt} 
-            title={'others'} 
-            desc={'Experience with Docker, Kubernetes, and CI/CD pipelines.'}
-            stackList={'Docker, Kubernetes, Jenkins'}
+            stackList={['Java', 'JavaScript', 'Ruby', 'postgreSQL', 'oracle', 'mySQL', 'Kubernetes', 'jenkins']}
           />
         </div>
 
