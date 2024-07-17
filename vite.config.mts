@@ -11,7 +11,8 @@ const config = defineConfig({
       "@mui/material",
       "@mui/icons-material",
       "@mui/utils"
-    ]
+    ],
+    exclude: ['chunk-JUUAVBPG'],
   }
 });
 
