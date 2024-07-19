@@ -4,13 +4,15 @@ import "react-vertical-timeline-component/style.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
 import { faGraduationCap } from '@fortawesome/free-solid-svg-icons';
+import { Stack } from '@mui/material';
+import { Chip } from '@mui/material';
 
 type ExperienceCardProps = {
   type: string,
   title: string,
   companyName: string,
   desc: string,
-  stackList: string,
+  stackList: string[],
   date: string,
 }
 
@@ -29,7 +31,19 @@ const ExperienceCard = ({ type, title, companyName, desc, stackList, date }: Exp
       <h3 className='vertical-timeline-element-title'>{ title }</h3>
       <h5 className='vertical-timeline-element-subtitle'>{ companyName }</h5>
       <p>{ desc }</p>
-      <p>{ stackList }</p>
+      <Stack direction="row" spacing={0.5} className='stack-list-wrapper'>
+        {stackList.map((stack) => (
+          <Chip 
+            className='stack-chip'
+            key={stack}
+            label={stack}
+            sx={{ 
+              textTransform: 'capitalize',
+              '& .MuiChip-root': { margin: '10px' }
+            }} 
+          />
+        ))}
+      </Stack>
     </VerticalTimelineElement> 
   )
 }

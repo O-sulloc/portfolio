@@ -53,10 +53,10 @@ const ResponsiveNavBar = () => {
               },
 
           }}>
-            <IconButton aria-label='light-mode-icon' size='large'>
+            <IconButton aria-label='light-mode-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
               <DarkModeIcon />
             </IconButton>
-            <IconButton aria-label='translate-icon' size='large'>
+            <IconButton aria-label='translate-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
               <TranslateIcon />
             </IconButton>
           </Box>

@@ -9,6 +9,12 @@ html {
 
 body {
   background: whitesmoke;
+  /* font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  letter-spacing: 0.00938em;
+  font-style: italic; */
 }
 
 /* common section title */
@@ -100,7 +106,6 @@ h1 {
 
 .home-section .content .social-icon {
   display: flex;
-  gap: 10px;
 }
 
 .home-section .content p {
@@ -177,13 +182,18 @@ h1 {
 }
 
 .stack-chip {
-  /* display: inline-block;
-  margin: 0 5px 5px 0;
-  font-size: 0.85em;  
-  padding: 6px;
-  background-color: gray;
-  border-radius: 15px;
-  white-space: nowrap; */
+  margin-bottom: 5px !important;
+  background-color: white !important;
+  border-style: none !important;
+
+  box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+  /* box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px; */
+
+  span {
+    font-family: "Courier Prime", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }
 }
 
 

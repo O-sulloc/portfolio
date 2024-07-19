@@ -6,7 +6,7 @@ const Project = () => {
   return (
     <>
       <div className="project-section" id='project-section'>
-        <h1>project</h1>
+        <h1>Project</h1>
         <div className='project-container'>
           <ProjectCard
             thumb={thumb1}
@@ -14,7 +14,7 @@ const Project = () => {
             desc='This project involves a web service that utilizes public data to provide information on the locations of veterinary clinics 
                   and grooming shops, while also offering real-time booking capabilities. 
                   Additionally, the service integrates the sale of pet-related products.'
-            stacks='Java, SpringBoot, MySQL, AWS RDS, JavaScript'
+            stackList={['Java', 'SpringBoot', 'MySQL', 'AWS RDS', 'JavaScript']}
             siteLink='https://gitgitgit.com'
             githubLink='https://github.com/O-sulloc/smart-pet/'
           >
@@ -26,7 +26,7 @@ const Project = () => {
             desc='This project involves a web service that utilizes public data to provide information on the locations of veterinary clinics 
                   and grooming shops, while also offering real-time booking capabilities. 
                   Additionally, the service integrates the sale of pet-related products.'
-            stacks='Java, SpringBoot, MySQL, AWS RDS, JavaScript'
+            stackList={['Java', 'SpringBoot', 'MySQL', 'AWS RDS', 'JavaScript']}
             siteLink='https://gitgitgit.com'
             githubLink='https://github.com/O-sulloc/smart-pet/'
           >
@@ -38,7 +38,7 @@ const Project = () => {
             desc='This project involves a web service that utilizes public data to provide information on the locations of veterinary clinics 
                   and grooming shops, while also offering real-time booking capabilities. 
                   Additionally, the service integrates the sale of pet-related products.'
-            stacks='Java, SpringBoot, MySQL, AWS RDS, JavaScript'
+            stackList={['Java', 'SpringBoot', 'MySQL', 'AWS RDS', 'JavaScript']}
             siteLink='https://gitgitgit.com'
             githubLink='https://github.com/O-sulloc/smart-pet/'
           >

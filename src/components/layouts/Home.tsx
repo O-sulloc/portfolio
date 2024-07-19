@@ -2,6 +2,7 @@ import React from 'react';
 import me from '../../assets/me.png';
 import { GitHub } from '@mui/icons-material';
 import { LinkedIn } from '@mui/icons-material';
+import { IconButton } from '@mui/material';
 
 const Home = () => {
   return (
@@ -12,11 +13,16 @@ const Home = () => {
         </div>
         <div className="content">
           <div className='social-icon'>
-            <a><GitHub fontSize='large'/></a>
-            <a><LinkedIn fontSize='large' /></a>
+            <IconButton aria-label='github' sx={{ "&:hover": { color: "black" } }} href='https://github.com/O-sulloc'>
+              <GitHub fontSize="large" />
+              {/* <GitHub fontSize='large'/> */}
+            </IconButton>
+            <IconButton aria-label='linkedin' sx={{ "&:hover": { color: "blue" } }} href='https://www.linkedin.com/in/jeonghyeon-kim-11b874202/'>
+              <LinkedIn fontSize="large" />
+            </IconButton>
           </div>
           <h1>Jeonghyeon Kim</h1>
-          <p>Full Stack Developer</p>
+          <p>Full Stack Engineer</p>
           {/* <div className='mobile-social-icon'>
             <a>github</a>
             <a>linkedlin</a>

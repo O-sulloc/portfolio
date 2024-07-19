@@ -17,18 +17,16 @@ const StackCard = ({ iconName, title, desc, stackList }: StackCardProps) => {
       <FontAwesomeIcon icon={iconName} size='3x' className='stack-icon' />
       <h3 className='stack-title'> {title} </h3>
       <p className='stack-desc'> {desc} </p>
-      <Stack direction="row" spacing={0.5} className='stack-list-wrapper' 
-        // sx={{
-        //   '& .MuiStack-root': { marginBottom: '10px' }
-        // }}
-      >
+      <Stack direction="row" spacing={0.5} className='stack-list-wrapper'>
         {stackList.map((stack) => (
           <Chip 
+            className='stack-chip'
             key={stack}
             label={stack}
+            variant='outlined'
             sx={{ 
               textTransform: 'capitalize',
-              '& .MuiChip-root': { marginBottom: '10px !important' }
+              '& .MuiChip-root': { margin: '10px' },
             }} 
           />
         ))}
