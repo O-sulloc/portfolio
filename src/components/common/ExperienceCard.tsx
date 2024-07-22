@@ -31,7 +31,7 @@ const ExperienceCard = ({ type, title, companyName, desc, stackList, date }: Exp
       <h3 className='vertical-timeline-element-title'>{ title }</h3>
       <h5 className='vertical-timeline-element-subtitle'>{ companyName }</h5>
       <p>{ desc }</p>
-      <Stack direction="row" spacing={0.5} className='stack-list-wrapper'>
+      <Stack direction="row" className='stack-list-wrapper'>
         {stackList.map((stack) => (
           <Chip 
             className='stack-chip'

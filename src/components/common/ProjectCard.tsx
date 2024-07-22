@@ -16,7 +16,7 @@ const ProjectCard = ({ thumb, title, desc, stackList, siteLink, githubLink }: Pr
       <img src={thumb} className="project-thumb" />
       <h3 className="project-title">{title}</h3>
       <p className="project-desc">{desc}</p>
-      <Stack direction="row" spacing={0.5} className='stack-list-wrapper'>
+      <Stack direction="row" className='stack-list-wrapper'>
         {stackList.map((stack) => (
           <Chip 
             className='stack-chip'

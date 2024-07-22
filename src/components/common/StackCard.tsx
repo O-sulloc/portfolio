@@ -17,7 +17,7 @@ const StackCard = ({ iconName, title, desc, stackList }: StackCardProps) => {
       <FontAwesomeIcon icon={iconName} size='3x' className='stack-icon' />
       <h3 className='stack-title'> {title} </h3>
       <p className='stack-desc'> {desc} </p>
-      <Stack direction="row" spacing={0.5} className='stack-list-wrapper'>
+      <Stack direction="row" className='stack-list-wrapper'>
         {stackList.map((stack) => (
           <Chip 
             className='stack-chip'
