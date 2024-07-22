@@ -11,8 +11,7 @@ const Stack = () => {
           <StackCard
             iconName={faJava} 
             title={'Backend Development'} 
-            // desc={'Developed and maintained server-side applications using robust and scalable technologies, ensuring efficient data management and high-performance services'}x
-            desc={'I have built a diverse array of web applications from scratch using modern technologies such as React and Flask. I have a strong proficiency in the SDLC process and frontend + backend development.'}
+            desc={'Developed and maintained server-side applications using robust and scalable technologies, ensuring efficient data management and high-performance services'}
             stackList={['Ruby', 'Java', 'Node.js', 'Express', 'JPA', 'PostgreSQL', 'Oracle', 'MySQL']}
           />
           

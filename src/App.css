@@ -1,3 +1,89 @@
+/*  */
+.home {
+  min-height: 800px;
+}
+
+.name-wrapper {
+  margin: 5em 0;
+}
+
+.home-name {
+  text-align: center;
+  font-family: "Playfair Display SC", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 11em;
+}
+
+.home-brief {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 210px;
+  align-items: center;
+  font-size: 3em;
+}
+
+.image-wrapper {
+  text-align: center;
+}
+
+/*  */
+
+@keyframes move {
+  from {
+    transform: translate(0vw, 0vh) rotate(-90deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+
+  to {
+    transform: translate(70vw, 50vh) rotate(-10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+}
+
+@keyframes move2 {
+  from {
+    transform: translate(60vw, 0vh) rotate(10deg);
+    border-radius: 76% 24% 33% 67% / 68% 55% 45% 32%;
+  }
+  to {
+    transform: translate(0vw, 0vh) rotate(50deg);
+    border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
+  }
+}
+
+.blob-first,
+.blob-second {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background-blend-mode: normal,normal,normal,normal,normal,normal; 
+  filter: blur(45px);
+  z-index: -1;
+}
+
+.blob-first {
+  transition: 0.05s linear;
+  animation: move 25s infinite alternate;
+  background: linear-gradient(180deg, #EF516D 0%, rgba(239, 81, 109, 0) 100%), radial-gradient(94.51% 124.88% at 94.32% 94.43%, 
+  rgba(65, 244, 255, 0.78) 0%, rgba(131, 218, 255, 0.6552) 32.29%, rgba(99, 175, 240, 0.3978) 64.06%, rgba(43, 90, 211, 0) 100%), 
+  linear-gradient(313.04deg, #341D65 0.93%, #604AEA 125.68%); 
+}
+
+.blob-second {
+  transition: 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: move2 25s infinite alternate;
+  background: radial-gradient(73.4% 100.98% at 95.54% 95.05%, rgba(255, 156, 65, 0.78) 0%, 
+  rgba(255, 168, 88, 0) 100%), linear-gradient(197.37deg, #FFF0A4 -0.38%, 
+  rgba(255, 240, 164, 0) 101.89%), radial-gradient(58.85% 73.83% at 9.82% 3.13%, 
+  rgba(49, 132, 255, 0.8) 0%, rgba(56, 75, 247, 0.208) 52.16%, rgba(62, 246, 246, 0) 100%), 
+  linear-gradient(117.39deg, #3E9EF6 3.91%, rgba(238, 43, 183, 0.33) 37.48%, 
+  rgba(246, 62, 106, 0) 73.98%), linear-gradient(306.53deg, #FFAADD 19.83%, rgba(255, 170, 221, 0) 97.33%); 
+}
+
+/*  */
+
+
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +94,13 @@ html {
 }
 
 body {
-  background: whitesmoke;
+  /* background: black; */
   /* font-family: "Lato", sans-serif;
   font-weight: 400;
   font-style: normal;
-  letter-spacing: 0.01em;
   letter-spacing: 0.00938em;
-  font-style: italic; */
+  font-style: normal; */
+  /* letter-spacing: 0.01em; */
 }
 
 /* common section title */
@@ -23,63 +109,11 @@ h1 {
   padding-bottom: 30px;
 }
 
-.container {
-}
-
-.blob-wrapper {
-  /* width: 100%;
-  height: 100%; */
-  /* position: relative; */
-  /* display: grid;
-  place-items: center;
-  isolation: isolate;
-  overflow: hidden; */
-}
-
-/* .blob {
-  position: absolute;
-  opacity: 0.5;
-  width: 400px;
-  aspect-ratio: 1/1;
-  animation: animate 10s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite
-    alternate forwards;
-  filter: blur(40px);
-  z-index: -1;
-  background: linear-gradient(
-    47deg,
-    rgba(255, 88, 139, 1) 21%,
-    rgb(0 164 173) 67%,
-    rgba(118, 74, 166, 1) 81%
-  )
-}
-
-@keyframes animate {
-  0% {
-    translate: 40% -25%;
-    border-radius: 60% 40% 30% 70% / 100% 85% 92% 74%;
-  }
-  50% {
-    translate: 0% 13%;
-    border-radius: 20% 71% 47% 70% / 81% 15% 22% 54%;
-    rotate: 41deg;
-    scale: 1.15;
-  }
-  100% {
-    translate: -45% 39%;
-    border-radius: 100% 75% 92% 74% / 60% 80% 30% 70%;
-    rotate: -60deg;
-    scale: 1.05;
-  }
-} */
-
-/* blob end */
-
 /* navigation */
 .navigation-bar {
   background-color: white !important;
 }
 
-/*  */
 .home-section {
   /* 여기에 뒷배경 들어감 */
   display: flex;
@@ -90,8 +124,10 @@ h1 {
 }
 
 .home-image {
-  width: 150px;
-  height: 150px;
+  /* width: 150px;
+  height: 150px; */
+  width: 200px;
+  height: 200px;
   background-color: white;
   border-radius: 50%;
   justify-content: space-between;
@@ -140,6 +176,7 @@ h1 {
 /* ============ stack section css ============ */
 .stack-section {
   padding: 10%;
+  background-color:#FFF0A4;
 }
 
 /* ============ stack card css ============ */
@@ -182,7 +219,7 @@ h1 {
 }
 
 .stack-chip {
-  margin-bottom: 5px !important;
+  margin: 0 5px 5px 0 !important;
   background-color: white !important;
   border-style: none !important;
 
