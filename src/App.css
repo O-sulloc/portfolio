@@ -160,7 +160,7 @@ h1 {
 /* ============ stack section css ============ */
 .stack-section {
   padding: 10%;
-  background-color:#FFF0A4;
+  /* background-color:#FFF0A4; */
 }
 
 /* ============ stack card css ============ */
@@ -262,32 +262,51 @@ h1 {
 .project-wrapper {
   flex: 1 1 30%;
   padding-bottom: 20px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05), 0px 24px 48px rgba(0, 0, 0, 0.12), 1px 3px 8px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.project-wrapper:hover {
+  background-color: #eed8ee;
+  background-image: linear-gradient(25deg, #eed8ee 0%, #eee5e5 100%);
+
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-wrapper .project-content {
+  padding: 20px;
 }
 
 .project-wrapper .project-thumb {
   width: 100%;
-  padding-bottom: 20px;
   /* height: auto; */
+  border-radius: 20px;
 }
 
-.project-wrapper .project-title {
-  font-size: 1.5em;
-  padding-bottom: 20px;
+.project-wrapper .project-body {
+  padding-top: 20px;
 }
 
-.project-wrapper .project-desc {
-  font-size: 1em;
-  padding-bottom: 10px;
+.project-body .project-title {
+  font-size: 1.8em;
 }
 
-.project-wrapper .project-stacks {
+.project-body .project-desc {
+  font-size: 1.1em;
+  padding: 20px 0;
+}
+
+.project-body .project-stacks {
   font-size: 0.85em;
-  padding-bottom: 10px;
 }
 
-.project-wrapper a {
-  color: red;
-  margin-right: 10px;
+.project-body .project-links {
+  padding-top: 20px;
 }
 
 /* ============ contact css ============ */
