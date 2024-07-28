@@ -10,6 +10,7 @@ const Experience = () => {
         <VerticalTimeline
           animate={ true }
           className={ 'experience-timeline' }
+          lineColor={ '#f8f9fa' }
         >
           <ExperienceCard 
             type='work' 
