@@ -27,6 +27,8 @@ const ExperienceCard = ({ type, title, companyName, desc, stackList, date }: Exp
       date={ date }
       iconStyle={ iconStyle }
       icon={<FontAwesomeIcon icon={ iconType } />}
+      contentStyle={{ background: '#f8f9fa', color: 'black' }}
+      contentArrowStyle={{ borderRight: '7px solid  #f8f9fa' }}
     >
       <h3 className='vertical-timeline-element-title'>{ title }</h3>
       <h5 className='vertical-timeline-element-subtitle'>{ companyName }</h5>
