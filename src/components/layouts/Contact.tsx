@@ -30,6 +30,8 @@ const Contact = () => {
       );
   };
 
+  
+
   return (
     <>
       <div className="contact-section" id='contact-section'>
@@ -38,8 +40,8 @@ const Contact = () => {
         <div className='contact-container'>
           <form className='contact-form' ref={form} onSubmit={sendEmail}>
             <div className='contact-info-wrapper'>
-              <input type='text' className='contact-name-input' placeholder='Your Name *' required />
-              <input type='email' className='contact-email-input' placeholder='Email / Phone *' required />
+              <input type='text' className='contact-name-input' placeholder='Your Name *' name='sender_name' required />
+              <input type='email' className='contact-email-input' placeholder='Email *' name='sender_email' required />
             </div>
             <div className='contact-message-wrapper'>
               <textarea className='contact-message-input' placeholder='Message *' name='message' rows={4} required />
