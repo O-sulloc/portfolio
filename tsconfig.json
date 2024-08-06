@@ -9,6 +9,6 @@
     "esModuleInterop": true,
     "module": "esnext"
   },
-  "include": ["./src/**/*", "vite-env.d.ts"],
+  "include": ["./src/**/*", "vite-env.d.ts", "public/assets"],
   "exclude": ["node_modules", "dist"]
 }

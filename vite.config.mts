@@ -6,6 +6,7 @@ import react from '@vitejs/plugin-react';
  */
 const config = defineConfig({
   plugins: [react()],
+  publicDir: 'public',
   optimizeDeps: {
     include: [
       "@mui/material",
