@@ -1,6 +1,6 @@
 import React from 'react';
 import ProjectCard from '../common/ProjectCard';
-import thumb1 from '../../assets/proejct/thumb-1.png'
+import thumb1 from '/assets/proejct/thumb-1.png'
 
 const Project = () => {
   return (

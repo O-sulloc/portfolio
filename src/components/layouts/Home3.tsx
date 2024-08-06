@@ -1,5 +1,5 @@
 import React from 'react';
-import me from '../../assets/me.png';
+import me from '/assets/me.png';
 import 'animate.css';
 import { IconButton } from '@mui/material';
 import { GitHub } from '@mui/icons-material';

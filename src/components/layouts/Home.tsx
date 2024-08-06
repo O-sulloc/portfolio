@@ -1,5 +1,5 @@
 import React from 'react';
-import me from '../../assets/me.png';
+import me from '/assets/me.png';
 import { GitHub } from '@mui/icons-material';
 import { LinkedIn } from '@mui/icons-material';
 import { IconButton } from '@mui/material';

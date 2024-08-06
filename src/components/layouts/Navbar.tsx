@@ -24,7 +24,9 @@ const ResponsiveNavBar = () => {
 
   const drawer = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
-      <p className="mobile-menu-top"><ListItemIcon/>Menu</p>
+      <div className="mobile-menu-top">
+        <ListItemIcon/> Menu
+      </div>
       <Divider />
       <List>
         {pages.map((page) => (
