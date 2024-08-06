@@ -136,6 +136,7 @@ const Contact = () => {
 
 
           <div className='contact-image-wrapper'>
+            <p className='bubble-message'>Rotate me!</p>
             <Planet />
           </div>
         </div>

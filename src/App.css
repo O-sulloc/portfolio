@@ -417,6 +417,39 @@ h1 {
 }
 
 /* 3d model */
+.bubble-message {
+  position: absolute;
+  background-color: #0B93F6;
+  color: white;
+
+  max-width: 255px;
+  word-wrap: break-word;
+  margin-bottom: 12px;
+  line-height: 24px;
+	padding: 10px 20px;
+  border-radius: 25px;  
+
+  &:before, &:after {
+    content: "";
+		position: absolute;
+    bottom: 0;
+    height: 25px;
+  }
+}
+
+.bubble-message:before {
+  width: 20px;
+  right: -7px;
+  background-color: #0B93F6;
+  border-bottom-left-radius: 16px 14px;
+}
+
+.bubble-message:after {
+  width: 26px;
+  right: -26px;
+  background-color: white;
+  border-bottom-left-radius: 10px;
+}
 
 .contact-image-wrapper {
   display: flex;
