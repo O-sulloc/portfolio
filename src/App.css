@@ -312,19 +312,21 @@ h1 {
 /* ============ contact css ============ */
 .contact-section {
   padding: 5% 10%;
+  /* min-height: 80vh; */
 }
 
 .contact-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  min-height: 600px;
 }
 
-.contact-form, .contact-image-wrapper {
+.contact-wrapper, .contact-image-wrapper {
   flex: 1;
 }
 
-.contact-info-wrapper {
+.contact-input-wrapper {
   display: flex;
   margin-bottom: 40px;
   gap: 20px;
@@ -388,7 +390,40 @@ h1 {
   transform: translateY(2px);
 }
 
+
+/* contact details */
+.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around
+}
+
+.contact-detail {
+  margin-top: 50px;
+}
+
+.contact-detail div {
+  padding-bottom: 25px;
+}
+
+.contact-detail h5 {
+  padding-bottom: 10px;
+  color: dimgray;
+}
+
+.contact-detail p {
+  font-size: 1.2em;
+  padding-bottom: 10px;
+}
+
+/* 3d model */
+
 .contact-image-wrapper {
   display: flex;
   place-content: center;
+}
+
+.planet-container {
+  width: 100%;
+  height: 100%;
 }
