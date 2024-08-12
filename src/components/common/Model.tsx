@@ -3,11 +3,12 @@ import { useGLTF } from '@react-three/drei';
 
 type ModelProps = {
   url: string;
+  scale: number;
 };
 
-const Model: React.FC<ModelProps> = ({ url }) => {
+const Model: React.FC<ModelProps> = ({ url, scale }) => {
   const { scene } = useGLTF(url);
-  return <primitive object={scene} scale={1.5}/>;
+  return <primitive object={scene} scale={scale} />;
 };
 
 export default Model;

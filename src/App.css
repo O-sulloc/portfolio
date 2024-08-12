@@ -4,7 +4,7 @@
 }
 
 body {
-
+  /* overflow-x: hidden; */
 }
 
 html {
@@ -90,7 +90,6 @@ html {
 }
 
 /* home blob start */
-
 @keyframes move {
   from {
     transform: translate(0vw, 0vh) rotate(-90deg);
@@ -113,6 +112,8 @@ html {
     border-radius: 24% 76% 35% 65% / 27% 36% 64% 73%;
   }
 }
+
+/* Resonsive */
 
 .blob-first,
 .blob-second {
@@ -261,13 +262,21 @@ h1 {
 /* project card */
 .project-wrapper {
   flex: 1 1 30%;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 25px;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.05), 0px 24px 48px rgba(0, 0, 0, 0.12), 1px 3px 8px rgba(0, 0, 0, 0.04);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+}
+
+@media screen {
+  @media (max-width: 1024px) {
+    .project-wrapper {
+      margin-bottom: 50px;
+    }
+  }
 }
 
 .project-wrapper:hover {
@@ -320,6 +329,12 @@ h1 {
   flex-direction: row;
   justify-content: space-between;
   min-height: 600px;
+}
+
+@media (max-width: 1024px) {
+  .contact-container {
+    flex-direction: column-reverse;
+  }
 }
 
 .contact-wrapper, .contact-image-wrapper {
@@ -417,6 +432,22 @@ h1 {
 }
 
 /* 3d model */
+.contact-image-wrapper {
+  max-width: 100%;
+}
+
+@media (max-width: 1440px) {
+  .contact-image-wrapper {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .contact-image-wrapper {
+    max-width: 100%;
+  }
+}
+
 .bubble-message {
   position: absolute;
   background-color: #0B93F6;
@@ -434,6 +465,18 @@ h1 {
 		position: absolute;
     bottom: 0;
     height: 25px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .bubble-message {
+    left: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .bubble-message {
+    left: 180px;
   }
 }
 
