@@ -25,7 +25,7 @@ const ResponsiveNavBar = () => {
   const drawer = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <div className="mobile-menu-top">
-        <ListItemIcon/> Menu
+        <ListItemIcon/>
       </div>
       <Divider />
       <List>
@@ -55,12 +55,12 @@ const ResponsiveNavBar = () => {
               },
 
           }}>
-            <IconButton aria-label='light-mode-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
+            {/* <IconButton aria-label='light-mode-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
               <DarkModeIcon />
             </IconButton>
             <IconButton aria-label='translate-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
               <TranslateIcon />
-            </IconButton>
+            </IconButton> */}
           </Box>
           {/* navBox */}
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>
