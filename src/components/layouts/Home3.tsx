@@ -20,8 +20,8 @@ const Home = () => {
           </div>
 
           <div className='home-brief'>
-            <div className='location animate__animated animate__fadeInLeft'>
-              <p>London, UK</p>
+            <div className='title animate__animated animate__fadeInRight'>
+              <p>Full Stack Engineer</p>
             </div>
 
             <div className='image-wrapper animate__animated animate__fadeInUp'>
@@ -36,9 +36,9 @@ const Home = () => {
               
               <img src={me} className='home-image'/>
             </div>
-            
-            <div className='title animate__animated animate__fadeInRight'>
-              <p>Full Stack Engineer</p>
+
+            <div className='location animate__animated animate__fadeInLeft'>
+              <p>London, UK</p>
             </div>
           </div>
         </div>

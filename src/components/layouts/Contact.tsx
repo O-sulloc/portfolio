@@ -119,7 +119,7 @@ const Contact = () => {
               <div>
                 <h5>Contact Detail</h5>
                 <p>wjdguskim1216@gmail.com</p>
-                <p>+123 456 7890</p>
+                <p>+44 7851 497841</p>
               </div>
 
               <div>

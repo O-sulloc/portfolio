@@ -9,15 +9,20 @@ const Planet = () => {
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
-      if (width == 1440) {
-        setScale(1.0); // 중간 크기 화면 (예: 태블릿)
-      } else if (width < 768){
-        setScale(0.5); // 작은 화면 (예: 모바일)
-      } else if (width >= 425 ){
-        setScale(1.5); // 작은 화면 (예: 모바일)
-      } else {
-        setScale(1.5); // 큰 화면 (예: 데스크탑)
+      if (width > 1440) {
+        setScale(1.5);
+      } else if (width > 1024) {
+        setScale(1.0);
       }
+      // if (width == 1440) {
+      //   // setScale(1.0); // 중간 크기 화면 (예: 태블릿)
+      // } else if (width < 768){
+      //   // setScale(0.5); // 작은 화면 (예: 모바일)
+      // } else if (width >= 425 ){
+      //   // setScale(1.5); // 작은 화면 (예: 모바일)
+      // } else {
+      //   setScale(1.5); // 큰 화면 (예: 데스크탑)
+      // }
     };
 
     window.addEventListener('resize', handleResize);
