@@ -72,6 +72,10 @@ html {
     min-height: 700px;
   }
 
+  .home-name {
+    font-size: 7em;
+  }
+
   .name-wrapper {
     margin-bottom: 100px;
   }
