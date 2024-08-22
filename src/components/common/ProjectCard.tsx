@@ -17,9 +17,15 @@ const ProjectCard = ({ thumb, title, desc, stackList, siteLink, githubLink }: Pr
     <div className="project-wrapper">
       <div className="project-content">
         <div>
-          <a href={siteLink}>
-            <img src={thumb} className="project-thumb" />
-          </a>
+          {siteLink ? (
+            <a href={siteLink}>
+              <img src={thumb} className="project-thumb" />
+            </a>
+          ) : (
+            <a href={githubLink}>
+              <img src={thumb} className="project-thumb" />
+            </a>
+          )}
         </div>
         
         <div className="project-body">
@@ -42,9 +48,12 @@ const ProjectCard = ({ thumb, title, desc, stackList, siteLink, githubLink }: Pr
             <IconButton aria-label='github' sx={{ "&:hover": { color: "black" } }} href={githubLink}>
               <GitHub />
             </IconButton>
-            <IconButton aria-label='site' sx={{ "&:hover": { color: "black" } }} href={siteLink}>
-              <WebAsset />
-            </IconButton>
+            {/* if siteLink is empty, hide the site button */}
+            {siteLink && (
+              <IconButton aria-label='site' sx={{ "&:hover": { color: "black" } }} href={siteLink}>
+                <WebAsset />
+              </IconButton>
+            )}
           </div>
         </div>
 
