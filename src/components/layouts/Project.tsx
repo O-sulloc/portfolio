@@ -12,11 +12,9 @@ const Project = () => {
           <ProjectCard
             thumb={thumb1}
             title='Pet Service'
-            desc='This project involves a web service that utilizes public data to provide information on the locations of veterinary clinics 
-                  and grooming shops, while also offering real-time booking capabilities. 
-                  Additionally, the service integrates the sale of pet-related products.'
-            stackList={['Java', 'SpringBoot', 'MySQL', 'AWS RDS', 'JavaScript']}
-            siteLink='https://gitgitgit.com'
+            desc='This project is a comprehensive web-based platform designed to connect pet owners with veterinary clinics and grooming services. The service allows users to browse a list of available pet service providers, view detailed information, and make real-time bookings. It integrates public data for accurate location-based service recommendations and provides users with a seamless booking experience. The platform also includes an admin interface for managing appointments, updating service offerings, and customizing reservation settings.'
+            stackList={['Java', 'SpringBoot', 'MySQL', 'AWS RDS', 'JSP', 'AJAX', 'JavaScript', 'JSP']}
+            siteLink=''
             githubLink='https://github.com/O-sulloc/smart-pet/'
           >
           </ProjectCard>
@@ -24,13 +22,7 @@ const Project = () => {
           <ProjectCard
             thumb={thumb2}
             title='Social Media Project'
-            desc='This project is a social media service backend application. 
-                  It includes key features such as user management (registration and login), post creation and retrieval, 
-                  comments functionality, and a like system. 
-                  The application communicates with client-side applications through RESTful APIs and uses JWT (JSON Web Token) for authentication 
-                  and authorization. 
-                  It is built with Spring Boot and uses MySQL for database management. 
-                  The project is deployed on AWS EC2 and utilizes Swagger for automatic API documentation generation.'
+            desc='This project is a social media web application designed to allow users to create accounts, sign in, post content, comment on posts, and interact with other users through a like system. The application communicates with the client-side using RESTful APIs and leverages JWT (JSON Web Token) for secure authentication and authorization. The backend is deployed on AWS EC2, containerized with Docker, and managed through GitLab CI/CD for continuous integration and deployment. Swagger is utilized for generating comprehensive API documentation automatically.'
             stackList={['Java', 'SpringBoot', 'MySQL', 'JWT', 'Swagger', 'AWS EC2', 'Docker', 'GitLab CI/CD']}
             siteLink='http://ec2-3-36-59-252.ap-northeast-2.compute.amazonaws.com:8080/swagger-ui/'
             githubLink='https://github.com/O-sulloc/social-media-project'
