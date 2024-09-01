@@ -45,9 +45,12 @@ const ProjectCard = ({ thumb, title, desc, stackList, siteLink, githubLink }: Pr
             ))}
           </Stack>
           <div className="project-links">
-            <IconButton aria-label='github' sx={{ "&:hover": { color: "black" } }} href={githubLink}>
-              <GitHub />
-            </IconButton>
+            {/* if githubLink is empty, hide the github button */}
+            {githubLink && (
+              <IconButton aria-label='github' sx={{ "&:hover": { color: "black" } }} href={githubLink}>
+                <GitHub />
+              </IconButton>
+            )}
             {/* if siteLink is empty, hide the site button */}
             {siteLink && (
               <IconButton aria-label='site' sx={{ "&:hover": { color: "black" } }} href={siteLink}>

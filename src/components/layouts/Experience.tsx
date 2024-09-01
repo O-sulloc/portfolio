@@ -17,7 +17,7 @@ const Experience = () => {
             title='Full Stack Web Developer' 
             companyName='Joseph & Stacey | Digital Experience Team' 
             desc=''
-            stackList={['Ruby', 'Ruby On Rails', 'JavaScript', 'Svelte', 'PostgreSQL', 'Ubuntu(Linux)']}
+            stackList={['Ruby', 'Ruby On Rails', 'JavaScript', 'Svelte', 'PostgreSQL', 'Ubuntu(Linux)', 'Shopify']}
             date='2023-2024'
           />
           <ExperienceCard 
