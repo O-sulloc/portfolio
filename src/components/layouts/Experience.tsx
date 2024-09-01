@@ -22,7 +22,7 @@ const Experience = () => {
           />
           <ExperienceCard 
             type='education' 
-            title='Java Full Stack Bootcamp Cource' 
+            title='Java Back-End School 2nd' 
             companyName='LikeLion' 
             desc='An intensive bootcamp focusing on full stack development with Java and modern frameworks'
             stackList={['Java', 'Spring Security', 'JPA', 'Docker', 'Kubernetes', 'AWS EC2', 'MySQL', 'JWT', 'JUnit', 'Gradle', 'Thymeleaf', 'Postman', 'Swagger']}
