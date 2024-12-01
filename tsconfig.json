@@ -7,7 +7,9 @@
     "lib": ["ES2015", "DOM", "DOM.Iterable"],
     "jsx": "react",
     "esModuleInterop": true,
-    "module": "esnext"
+    "module": "esnext",
+    "strict": true,
+    "resolveJsonModule": true,
   },
   "include": ["./src/**/*", "vite-env.d.ts", "public/assets"],
   "exclude": ["node_modules", "dist"]
