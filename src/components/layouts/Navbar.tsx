@@ -10,10 +10,17 @@ import { Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItem
 import LightModeIcon from '@mui/icons-material/LightMode';
 import DarkModeIcon from '@mui/icons-material/DarkMode';
 import TranslateIcon from '@mui/icons-material/Translate';
+import { useTranslation } from 'react-i18next';
 
 const pages = ['home', 'stack', 'experience', 'project', 'contact'];
 
 const ResponsiveNavBar = () => {
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language;
+
+  const languageSwitchHandler = () => {
+    i18n.changeLanguage(currentLanguage === "en-US" ? "ko-KR" : "en-US");
+  };
 
   // mobile drawer navigation 
   const [open, setOpen] = React.useState(false);
@@ -55,12 +62,12 @@ const ResponsiveNavBar = () => {
               },
 
           }}>
-            {/* <IconButton aria-label='light-mode-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
+            <IconButton aria-label='light-mode-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
               <DarkModeIcon />
             </IconButton>
-            <IconButton aria-label='translate-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
+            <IconButton onClick={languageSwitchHandler} aria-label='translate-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
               <TranslateIcon />
-            </IconButton> */}
+            </IconButton>
           </Box>
           {/* navBox */}
           <Box sx={{ flexGrow: 0, display: { xs: 'none', md: 'flex' } }}>

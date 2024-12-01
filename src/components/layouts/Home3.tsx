@@ -5,7 +5,10 @@ import { IconButton } from '@mui/material';
 import { GitHub } from '@mui/icons-material';
 import { LinkedIn } from '@mui/icons-material';
 
+import { useTranslation } from 'react-i18next';
+
 const Home = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className='blob-first'></div>
@@ -15,13 +18,14 @@ const Home = () => {
         <div className='information'>
           <div className='name-wrapper'>
             <h1 className='home-name animate__animated animate__fadeInUp'>
-              Jeonghyeon Kim
+              {/* Jeonghyeon Kim */}
+              {t("home:name")}
             </h1>
           </div>
 
           <div className='home-brief'>
             <div className='title animate__animated animate__fadeInRight'>
-              <p>Full Stack Engineer</p>
+              <p>{t("home:desc")}</p>
             </div>
 
             <div className='image-wrapper animate__animated animate__fadeInUp'>
@@ -38,7 +42,7 @@ const Home = () => {
             </div>
 
             <div className='location animate__animated animate__fadeInLeft'>
-              <p>London, UK</p>
+              <p>{t("home:location")}</p>
             </div>
           </div>
         </div>
