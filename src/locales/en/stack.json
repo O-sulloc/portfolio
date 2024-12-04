@@ -1,0 +1,24 @@
+{
+  "backend": {
+    "title": "Backend Development",
+    "desc": "Experienced in building robust server-side applications and RESTful APIs, with a strong foundation in object-oriented design. Skilled in PostgreSQL and MySQL for efficient database integration and optimization, and proficient in frameworks like Spring Boot and Ruby on Rails. Developed scalable, production-grade applications in Ruby and Java within Agile environments.",
+    "stackList": [
+      "Ruby", "Java", "Node.js", "Spring Boot", "JPA", "PostgreSQL", "MySQL"
+    ]
+  },
+  "front": {
+    "title": "Frontend Development",
+    "desc": "Experienced in SSR and CSR implementation for seamless user interaction and optimized performance. Proficient in Svelte and JavaScript, with commercial exposure, and experienced in developing reusable components using React. A solid understanding of JavaScript fundamentals and modern language features allows me to build responsive, accessible, and scalable front-end code with a strong emphasis on detail and usability.",
+    "stackList": [
+      "JavaScript", "TypeScript", "React", "Svelte", "HTML5", "CSS3", "Material-UI", "Bootstrap", "JSP", "jQuery"
+    ]
+  },
+  "devOps": {
+    "title": "DevOps",
+    "desc": "Streamlined the development process through automation, continuous integration, and continuous delivery using industry-standard tools and platforms",
+    "stackList": [
+      "AWS", "Docker", "Kubernetes", "Linux", "Git", "GitHub Actions", "GitLab CI/CD"
+    ]
+  }
+}
+

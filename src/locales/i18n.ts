@@ -17,8 +17,8 @@ i18n.use(initReactI18next).init({
   resources,
   lng: "en-US", // default language
   fallbackLng: {
-    "ko-KR": ["ko-KR"], // use ko-KR if en-US translation is not available
-    default: ["en-US"]
+    // "ko-KR": ["ko-KR"], // use ko-KR if en-US translation is not available
+    default: ["en-US"] // use en-US if ko-KR translation is not available
   },
   debug: true,
   keySeparator: false,
