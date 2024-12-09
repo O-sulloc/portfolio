@@ -1,0 +1,32 @@
+{
+  "first": {
+    "type": "education",
+    "title": "Java Full Stack Bootcamp Cource",
+    "company": "SSangyong Institute of System Technology",
+    "desc": "During this bootcamp, I gained a solid foundation in web development. I learned to build backend logic using Java and the Spring Framework, integrating databases with MyBatis and Oracle. On the frontend, I used JSP, jQuery, and Ajax to create dynamic and interactive user interfaces, along with Bootstrap for responsive design. The program also introduced me to deploying applications on AWS RDS and Heroku, while managing development environments with Apache Tomcat and Maven. This course provided a comprehensive understanding of the web development process, with a focus on traditional and widely-used technologies.",
+    "stack": [
+      "Java", "Spring", "Spring Boot", "AWS RDS", "MyBatis", "Oracle", "JSP", "jQuery", "Ajax", "Bootstrap", "Apache Tomcat", "Maven", "Heroku"
+    ],
+    "date": "2021-2021"
+  },
+  "second": {
+    "type": "education",
+    "title": "Java Back-End School 2nd",
+    "company": "LikeLion",
+    "desc": "This bootcamp was focused on modern web development practices and advanced tools. I deepened my knowledge of backend development by learning Spring Security for authentication and authorization, JPA for data management, and JUnit for testing. I also gained hands-on experience with JWT for secure communication and Swagger for automated API documentation. The course included server-side rendering with Thymeleaf and introduced me to containerized deployment using Docker and Kubernetes, as well as cloud environment management with AWS EC2. Additionally, I learned how to test APIs using Postman and streamline the build process with Gradle. This program helped me strengthen my skills with cutting-edge technologies and efficient workflows.",
+    "stack": [
+      "Java", "Spring Security", "JPA", "Docker", "Kubernetes", "AWS EC2", "MySQL", "JWT", "JUnit", "Gradle", "Thymeleaf", "Postman", "Swagger"
+    ],
+    "date": "2022-2023"
+  },
+  "third": {
+    "type": "work",
+    "title": "Full Stack Web Developer",
+    "company": "Joseph and Stacey",
+    "desc": "Developed and maintained the company’s ERP and e-commerce websites",
+    "stack": [
+      "Ruby", "Ruby On Rails", "JavaScript", "Svelte", "PostgreSQL", "Ubuntu(Linux)", "Shopify"
+    ],
+    "date": "2023-2024"
+  }
+}
