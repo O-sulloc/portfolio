@@ -3,6 +3,7 @@ import emailjs from '@emailjs/browser';
 import { Alert, Button, Dialog, DialogActions, DialogTitle, IconButton, Snackbar, SnackbarCloseReason, SnackbarOrigin } from '@mui/material';
 import Planet from '../common/Planet';
 import { GitHub, LinkedIn } from '@mui/icons-material';
+import { useTranslation } from 'react-i18next';
 
 // snackbar position
 interface State extends SnackbarOrigin {
@@ -10,6 +11,8 @@ interface State extends SnackbarOrigin {
 }
 
 const Contact = () => {
+  const { t } = useTranslation();
+
   const [dialogOpen, setDialogOpen] = useState(false);
   const [emailStatus, setEmailStatus] =useState<null | 'success' | 'error'>(null);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -92,24 +95,24 @@ const Contact = () => {
           <div className='contact-wrapper'>
             <form className='contact-form' ref={form} onSubmit={sendEmail}>
               <div className='contact-input-wrapper'>
-                <input type='text' className='contact-name-input' placeholder='Your Name *' name='sender_name' required />
-                <input type='email' className='contact-email-input' placeholder='Email *' name='sender_email' required />
+                <input type='text' className='contact-name-input' placeholder={t("contact:placeholder:name")} name='sender_name' required />
+                <input type='email' className='contact-email-input' placeholder={t("contact:placeholder:email")} name='sender_email' required />
               </div>
               <div className='contact-message-wrapper'>
-                <textarea className='contact-message-input' placeholder='Message *' name='message' rows={4} required />
+                <textarea className='contact-message-input' placeholder={t("contact:placeholder:message")} name='message' rows={4} required />
               </div>
-              <button className='contact-button' onClick={handleSubmitBtn}>Send</button>
+              <button className='contact-button' onClick={handleSubmitBtn}>{t("contact:placeholder:send")}</button>
               <Dialog
                 open={dialogOpen}
                 onClose={handleDialogClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
               >
-                <DialogTitle id="alert-dialog-title">{"Are you sure you want to send the email?"}</DialogTitle>
+                <DialogTitle id="alert-dialog-title">{t("contact:email:confirm")}</DialogTitle>
                 <DialogActions>
-                  <Button onClick={handleDialogClose}>No</Button>
+                  <Button onClick={handleDialogClose}>{t("contact:email:no")}</Button>
                   <Button onClick={handleSendYes} autoFocus>
-                    Yes
+                    {t("contact:email:yes")}
                   </Button>
                 </DialogActions>
               </Dialog>
@@ -117,9 +120,9 @@ const Contact = () => {
 
             <div className='contact-detail'>
               <div>
-                <h5>Contact Detail</h5>
-                <p>wjdguskim1216@gmail.com</p>
-                <p>+44 7851 497841</p>
+                <h5>{t("contact:contact:title")}</h5>
+                <p>{t("contact:contact:email")}</p>
+                <p>{t("contact:contact:phone")}</p>
               </div>
 
               <div>
@@ -136,7 +139,7 @@ const Contact = () => {
 
 
           <div className='contact-image-wrapper'>
-            <p className='bubble-message'>Rotate me!</p>
+            <p className='bubble-message'>{t("contact:try")}</p>
             <Planet />
           </div>
         </div>
@@ -149,11 +152,11 @@ const Contact = () => {
         >
           {emailStatus === 'success' ? (
             <Alert onClose={handleSnackbarClose} severity="success" sx={{ width: '100%' }}>
-              Email sent successfully! 
+              {t("contact:email:success")}
             </Alert>
           ) : (
             <Alert onClose={handleSnackbarClose} severity="error" sx={{ width: '100%' }}>
-              Failed to send email. Please try again later.
+              {t("contact:email:error")}
             </Alert>
           )}
         </Snackbar>

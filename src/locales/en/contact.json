@@ -1,0 +1,21 @@
+{
+  "placeholder": {
+    "name": "Your Name *",
+    "email": "Your Email *",
+    "message": "Message * ",
+    "send": "Send"
+  },
+  "email": {
+    "confirm": "Are you sure you want to send the email?",
+    "yes": "Yes",
+    "no": "No",
+    "success": "Email sent successfully!", 
+    "error": "Failed to send email. Please try again later."  
+  },
+  "contact": {
+    "title": "Contact Detail",
+    "email": "wjdguskim1216@gmail.com",
+    "phone": "+44(UK) 7851 497841"
+  },
+  "try": "Rotate me!"
+}
