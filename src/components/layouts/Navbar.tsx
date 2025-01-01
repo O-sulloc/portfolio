@@ -62,9 +62,9 @@ const ResponsiveNavBar = () => {
               },
 
           }}>
-            <IconButton aria-label='light-mode-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
+            {/* <IconButton aria-label='light-mode-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
               <DarkModeIcon />
-            </IconButton>
+            </IconButton> */}
             <IconButton onClick={languageSwitchHandler} aria-label='translate-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
               <TranslateIcon />
             </IconButton>
@@ -104,6 +104,13 @@ const ResponsiveNavBar = () => {
             >
               {drawer}
             </Drawer>
+
+            {/* <IconButton aria-label='light-mode-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
+              <DarkModeIcon />
+            </IconButton>
+            <IconButton onClick={languageSwitchHandler} aria-label='translate-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
+              <TranslateIcon />
+            </IconButton> */}
           </Box>
         </Toolbar>
       </Container>
