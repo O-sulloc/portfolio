@@ -23,7 +23,7 @@
     "type": "work",
     "title": "Full Stack Web Developer",
     "company": "Joseph and Stacey",
-    "desc": "Developed and maintained the company’s ERP and e-commerce websites",
+    "desc": "At Joseph and Stacey, I contributed as a Full-Stack Developer, building and maintaining ERP and e-commerce systems using Svelte and Ruby. I worked closely with cross-functional teams to design user-centric interfaces, optimize database structures, and implement solutions that enhanced operational efficiency and system reliability. This experience sharpened my ability to adapt quickly, solve complex problems, and deliver meaningful results.",
     "stack": [
       "Ruby", "Ruby On Rails", "JavaScript", "Svelte", "PostgreSQL", "Ubuntu(Linux)", "Shopify"
     ],

@@ -23,7 +23,7 @@
     "type": "work",
     "title": "풀스택 웹 개발자",
     "company": "조셉앤스테이시",
-    "desc": "developed and maintained the company’s ERP and e-commerce websites",
+    "desc": "풀스택 개발자로 근무하며 Svelte와 Ruby를 사용해 ERP와 이커머스 시스템을 개발하고 유지보수했습니다. 여러 부서와 협업해 사용자 중심의 인터페이스를 설계하고, 데이터베이스 구조를 최적화하며 운영 효율성과 시스템 안정성을 높이는 솔루션을 구현했습니다.",
     "stack": [
       "Ruby", "Ruby On Rails", "JavaScript", "Svelte", "PostgreSQL", "Ubuntu(Linux)", "Shopify"
     ],
