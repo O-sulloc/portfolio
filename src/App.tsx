@@ -5,7 +5,8 @@ import { useTranslation } from 'react-i18next';
 
 const App = () => {
   const { i18n } = useTranslation();
-  const isLocaleKR = navigator.language.includes('KR'); // check if the user's locale is Korean
+  // const isLocaleKR = navigator.language.includes('KR'); // check if the user's locale is Korean
+  const isLocaleKR = false;
   // return boolean value
 
   useEffect(() => {
