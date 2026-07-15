@@ -14,10 +14,6 @@ const StackChips = ({ items, variant = 'filled' }: StackChipsProps) => (
         key={stack}
         label={stack}
         variant={variant}
-        sx={{
-          textTransform: 'capitalize',
-          '& .MuiChip-root': { margin: '10px' },
-        }}
       />
     ))}
   </Stack>

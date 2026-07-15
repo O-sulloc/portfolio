@@ -29,10 +29,10 @@ const Home = () => {
 
             <div className='image-wrapper animate__animated animate__fadeInUp'>
               <div className='social-icon animate__animated animate__fadeInDown'>
-                <IconButton aria-label='github' sx={{ "&:hover": { color: "black" } }} href='https://github.com/O-sulloc'>
+                <IconButton aria-label='github' href='https://github.com/O-sulloc'>
                   <GitHub fontSize="large" />
                 </IconButton>
-                <IconButton aria-label='linkedin' sx={{ "&:hover": { color: "blue" } }} href='https://www.linkedin.com/in/jeonghyeon-kim-11b874202/'>
+                <IconButton aria-label='linkedin' sx={{ '&:hover': { color: 'social.linkedin' } }} href='https://www.linkedin.com/in/jeonghyeon-kim-11b874202/'>
                   <LinkedIn fontSize="large" />
                 </IconButton>
               </div>

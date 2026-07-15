@@ -60,7 +60,7 @@ const ResponsiveNavBar = () => {
               },
 
           }}>
-            <IconButton onClick={languageSwitchHandler} aria-label='translate-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
+            <IconButton onClick={languageSwitchHandler} aria-label='translate-icon' size='large'>
               <TranslateIcon />
             </IconButton>
           </Box>

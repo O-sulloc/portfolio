@@ -114,10 +114,10 @@ const Contact = () => {
 
               <div>
                 <h5>{t("contact:social")}</h5>
-                <IconButton aria-label='github' sx={{ "&:hover": { color: "black" } }} href='https://github.com/O-sulloc'>
+                <IconButton aria-label='github' href='https://github.com/O-sulloc'>
                   <GitHub />
                 </IconButton>
-                <IconButton aria-label='linkedin' sx={{ "&:hover": { color: "blue" } }} href='https://www.linkedin.com/in/jeonghyeon-kim-11b874202/'>
+                <IconButton aria-label='linkedin' sx={{ '&:hover': { color: 'social.linkedin' } }} href='https://www.linkedin.com/in/jeonghyeon-kim-11b874202/'>
                   <LinkedIn />
                 </IconButton>
               </div>
