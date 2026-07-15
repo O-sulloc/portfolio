@@ -1,8 +1,7 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import '@fortawesome/free-regular-svg-icons'
 import { IconDefinition } from '@fortawesome/free-regular-svg-icons';
-import { Chip, Stack } from '@mui/material';
+import StackChips from './StackChips';
 
 type StackCardProps = {
   iconName: IconDefinition,
@@ -17,20 +16,7 @@ const StackCard = ({ iconName, title, desc, stackList }: StackCardProps) => {
       <FontAwesomeIcon icon={iconName} size='3x' className='stack-icon' />
       <h3 className='stack-title'> {title} </h3>
       <p className='stack-desc'> {desc} </p>
-      <Stack direction="row" className='stack-list-wrapper'>
-        {stackList.map((stack) => (
-          <Chip 
-            className='stack-chip'
-            key={stack}
-            label={stack}
-            variant='outlined'
-            sx={{ 
-              textTransform: 'capitalize',
-              '& .MuiChip-root': { margin: '10px' },
-            }} 
-          />
-        ))}
-      </Stack>
+      <StackChips items={stackList} variant="outlined" />
     </div>
   )
 }

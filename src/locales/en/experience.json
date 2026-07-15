@@ -1,15 +1,25 @@
-{
-  "first": {
-    "type": "education",
-    "title": "Java Full Stack Bootcamp Cource",
-    "company": "SSangyong Institute of System Technology",
-    "desc": "During this bootcamp, I gained a solid foundation in web development. I learned to build backend logic using Java and the Spring Framework, integrating databases with MyBatis and Oracle. On the frontend, I used JSP, jQuery, and Ajax to create dynamic and interactive user interfaces, along with Bootstrap for responsive design. The program also introduced me to deploying applications on AWS RDS and Heroku, while managing development environments with Apache Tomcat and Maven. This course provided a comprehensive understanding of the web development process, with a focus on traditional and widely-used technologies.",
+[
+  {
+    "type": "work",
+    "title": "Full Stack Developer",
+    "company": "The Cocktail Lab",
+    "desc": "As the sole developer responsible for the complete redesign and rebuild of The Cocktail Lab's website, I transformed their digital presence using cutting-edge web technologies. Implemented advanced animation systems using GSAP ScrollTrigger and Framer Motion, created sophisticated multi-step contact forms with real-time validation, and optimized for SEO with comprehensive structured data implementation. The project showcased my ability to deliver production-ready applications with modern UX/UI standards and accessibility compliance.",
     "stack": [
-      "Java", "Spring", "Spring Boot", "AWS RDS", "MyBatis", "Oracle", "JSP", "jQuery", "Ajax", "Bootstrap", "Apache Tomcat", "Maven", "Heroku"
+      "Next.js 15", "React 19", "TypeScript", "Tailwind CSS", "GSAP", "Framer Motion", "React Hook Form", "Zod", "Vercel", "SEO"
     ],
-    "date": "2021-2021"
+    "date": "2025-present"
   },
-  "second": {
+  {
+    "type": "work",
+    "title": "Full Stack Web Developer",
+    "company": "Joseph and Stacey",
+    "desc": "At Joseph and Stacey, I contributed as a Full-Stack Developer, building and maintaining ERP and e-commerce systems using Svelte and Ruby. I worked closely with cross-functional teams to design user-centric interfaces, optimize database structures, and implement solutions that enhanced operational efficiency and system reliability. This experience sharpened my ability to adapt quickly, solve complex problems, and deliver meaningful results.",
+    "stack": [
+      "Ruby", "Ruby On Rails", "JavaScript", "Svelte", "PostgreSQL", "Ubuntu(Linux)", "Shopify"
+    ],
+    "date": "2023-2024"
+  },
+  {
     "type": "education",
     "title": "Java Back-End School 2nd",
     "company": "LikeLion",
@@ -19,14 +29,14 @@
     ],
     "date": "2022-2023"
   },
-  "third": {
-    "type": "work",
-    "title": "Full Stack Web Developer",
-    "company": "Joseph and Stacey",
-    "desc": "At Joseph and Stacey, I contributed as a Full-Stack Developer, building and maintaining ERP and e-commerce systems using Svelte and Ruby. I worked closely with cross-functional teams to design user-centric interfaces, optimize database structures, and implement solutions that enhanced operational efficiency and system reliability. This experience sharpened my ability to adapt quickly, solve complex problems, and deliver meaningful results.",
+  {
+    "type": "education",
+    "title": "Java Full Stack Bootcamp Cource",
+    "company": "SSangyong Institute of System Technology",
+    "desc": "During this bootcamp, I gained a solid foundation in web development. I learned to build backend logic using Java and the Spring Framework, integrating databases with MyBatis and Oracle. On the frontend, I used JSP, jQuery, and Ajax to create dynamic and interactive user interfaces, along with Bootstrap for responsive design. The program also introduced me to deploying applications on AWS RDS and Heroku, while managing development environments with Apache Tomcat and Maven. This course provided a comprehensive understanding of the web development process, with a focus on traditional and widely-used technologies.",
     "stack": [
-      "Ruby", "Ruby On Rails", "JavaScript", "Svelte", "PostgreSQL", "Ubuntu(Linux)", "Shopify"
+      "Java", "Spring", "Spring Boot", "AWS RDS", "MyBatis", "Oracle", "JSP", "jQuery", "Ajax", "Bootstrap", "Apache Tomcat", "Maven", "Heroku"
     ],
-    "date": "2023-2024"
+    "date": "2021-2021"
   }
-}
+]

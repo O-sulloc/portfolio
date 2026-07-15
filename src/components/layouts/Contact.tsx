@@ -5,25 +5,15 @@ import Planet from '../common/Planet';
 import { GitHub, LinkedIn } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
 
-// snackbar position
-interface State extends SnackbarOrigin {
-  open: boolean;
-}
+// snackbar position (fixed)
+const snackbarPosition: SnackbarOrigin = { vertical: 'top', horizontal: 'center' };
 
 const Contact = () => {
   const { t } = useTranslation();
 
   const [dialogOpen, setDialogOpen] = useState(false);
-  const [emailStatus, setEmailStatus] =useState<null | 'success' | 'error'>(null);
+  const [emailStatus, setEmailStatus] = useState<null | 'success' | 'error'>(null);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
-  
-  // snackbar position
-  const [state, setState] = React.useState<State>({
-    open: false,
-    vertical: 'top',
-    horizontal: 'center',
-  });
-  const { vertical, horizontal, open } = state;
 
   const form = useRef<HTMLFormElement>(null);
 
@@ -55,21 +45,18 @@ const Contact = () => {
 
     emailjs
       .sendForm(
-        import.meta.env.VITE_APP_SERVICE_ID as string,
-        import.meta.env.VITE_APP_TEMPLATE_ID as string,
+        import.meta.env.VITE_APP_SERVICE_ID,
+        import.meta.env.VITE_APP_TEMPLATE_ID,
         form.current,
-        import.meta.env.VITE_APP_PUBLIC_KEY as string
+        import.meta.env.VITE_APP_PUBLIC_KEY
       )
       .then(
         (result) => {
-          if (result.status === 200) {
-            console.log('Email sent successfully!');
-            setEmailStatus('success');
-            setSnackbarOpen(true);
-          }
+          setEmailStatus(result.status === 200 ? 'success' : 'error');
+          setSnackbarOpen(true);
         },
         (error) => {
-          console.error('Failed to send email. Error: ', error);
+          console.error('Failed to send email:', error);
           setEmailStatus('error');
           setSnackbarOpen(true);
         }
@@ -77,7 +64,7 @@ const Contact = () => {
   };
 
   const handleSnackbarClose = (
-    event?: React.SyntheticEvent | Event,
+    _event?: React.SyntheticEvent | Event,
     reason?: SnackbarCloseReason,
   ) => {
     if (reason === 'clickaway') {
@@ -89,7 +76,7 @@ const Contact = () => {
   return (
     <>
       <div className="contact-section" id='contact-section'>
-        <h1>Contact</h1>
+        <h1>{t("navbar:contact")}</h1>
 
         <div className='contact-container'>
           <div className='contact-wrapper'>
@@ -126,7 +113,7 @@ const Contact = () => {
               </div>
 
               <div>
-                <h5>Social</h5>
+                <h5>{t("contact:social")}</h5>
                 <IconButton aria-label='github' sx={{ "&:hover": { color: "black" } }} href='https://github.com/O-sulloc'>
                   <GitHub />
                 </IconButton>
@@ -148,7 +135,7 @@ const Contact = () => {
           open={snackbarOpen}
           autoHideDuration={5000}
           onClose={handleSnackbarClose}
-          anchorOrigin={{ vertical, horizontal }}
+          anchorOrigin={snackbarPosition}
         >
           {emailStatus === 'success' ? (
             <Alert onClose={handleSnackbarClose} severity="success" sx={{ width: '100%' }}>

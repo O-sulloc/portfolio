@@ -7,8 +7,6 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import { Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
-import LightModeIcon from '@mui/icons-material/LightMode';
-import DarkModeIcon from '@mui/icons-material/DarkMode';
 import TranslateIcon from '@mui/icons-material/Translate';
 import { useTranslation } from 'react-i18next';
 
@@ -39,7 +37,7 @@ const ResponsiveNavBar = () => {
         {pages.map((page) => (
           <ListItem key={page} disablePadding>
             <ListItemButton component='a' href={`#${page}-section`} >
-              <ListItemText primary={page} />
+              <ListItemText primary={t(`navbar:${page}`)} />
             </ListItemButton>
           </ListItem>
         ))}
@@ -62,9 +60,6 @@ const ResponsiveNavBar = () => {
               },
 
           }}>
-            {/* <IconButton aria-label='light-mode-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
-              <DarkModeIcon />
-            </IconButton> */}
             <IconButton onClick={languageSwitchHandler} aria-label='translate-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
               <TranslateIcon />
             </IconButton>
@@ -77,7 +72,7 @@ const ResponsiveNavBar = () => {
                 href={`#${page}-section`}
                 sx={{ my: 2, color: 'black', display: 'block', textTransform: 'capitalize' }}
               >
-                {page}
+                {t(`navbar:${page}`)}
               </Button>
             ))}
           </Box>
@@ -91,7 +86,6 @@ const ResponsiveNavBar = () => {
               onClick={toggleDrawer(true)}
               color="inherit"
             >
-              {/* <MenuIcon sx={{ color: black[500] }}/> */}
               <MenuIcon color='disabled' />
             </IconButton>
             <Drawer
@@ -104,13 +98,6 @@ const ResponsiveNavBar = () => {
             >
               {drawer}
             </Drawer>
-
-            {/* <IconButton aria-label='light-mode-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
-              <DarkModeIcon />
-            </IconButton>
-            <IconButton onClick={languageSwitchHandler} aria-label='translate-icon' size='large' sx={{ "&:hover": { color: "black" } }} >
-              <TranslateIcon />
-            </IconButton> */}
           </Box>
         </Toolbar>
       </Container>

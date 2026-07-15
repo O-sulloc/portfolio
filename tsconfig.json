@@ -1,15 +1,19 @@
 {
   "compilerOptions": {
     "allowJs": true,
-    "target": "ES6",
+    "target": "ES2020",
     "outDir": "./dist",
     "moduleResolution": "Node",
-    "lib": ["ES2015", "DOM", "DOM.Iterable"],
-    "jsx": "react",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "jsx": "react-jsx",
     "esModuleInterop": true,
     "module": "esnext",
     "strict": true,
     "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true
   },
   "include": ["./src/**/*", "vite-env.d.ts", "public/assets"],
   "exclude": ["node_modules", "dist"]

@@ -1,15 +1,15 @@
-{
-  "first": {
-    "type": "education",
-    "title": "AWS클라우드 기반 SW융합 개발자 양성과정",
-    "company": "쌍용교육센터",
-    "desc": "Java와 Spring Framework를 중심으로 웹 애플리케이션의 백엔드 로직과 데이터베이스 연동(MyBatis, Oracle)을 학습하며, JSP, jQuery, Ajax와 같은 전통적인 프론트엔드 기술로 동적인 UI를 구현하는 방법을 익혔습니다. AWS RDS와 Heroku를 활용한 배포 과정을 통해 실제 서비스 환경을 경험했으며, Apache Tomcat과 Maven을 사용해 개발과 배포 환경을 구성하는 실습도 진행했습니다. 이 과정으로 웹 개발의 전반적인 흐름을 이해하고, 자바 풀스택의 기초를 다질 수 있었습니다.",
+[
+  {
+    "type": "work",
+    "title": "풀스택 웹 개발자",
+    "company": "조셉앤스테이시",
+    "desc": "풀스택 개발자로 근무하며 Svelte와 Ruby를 사용해 ERP와 이커머스 시스템을 개발하고 유지보수했습니다. 여러 부서와 협업해 사용자 중심의 인터페이스를 설계하고, 데이터베이스 구조를 최적화하며 운영 효율성과 시스템 안정성을 높이는 솔루션을 구현했습니다.",
     "stack": [
-      "Java", "Spring", "Spring Boot", "AWS RDS", "MyBatis", "Oracle", "JSP", "jQuery", "Ajax", "Bootstrap", "Apache Tomcat", "Maven", "Heroku"
+      "Ruby", "Ruby On Rails", "JavaScript", "Svelte", "PostgreSQL", "Ubuntu(Linux)", "Shopify"
     ],
-    "date": "2021-2021"
+    "date": "2023-2024"
   },
-  "second": {
+  {
     "type": "education",
     "title": "자바 백엔드 스쿨 2기",
     "company": "멋쟁이사자처럼(부트캠프)",
@@ -19,14 +19,14 @@
     ],
     "date": "2022-2023"
   },
-  "third": {
-    "type": "work",
-    "title": "풀스택 웹 개발자",
-    "company": "조셉앤스테이시",
-    "desc": "풀스택 개발자로 근무하며 Svelte와 Ruby를 사용해 ERP와 이커머스 시스템을 개발하고 유지보수했습니다. 여러 부서와 협업해 사용자 중심의 인터페이스를 설계하고, 데이터베이스 구조를 최적화하며 운영 효율성과 시스템 안정성을 높이는 솔루션을 구현했습니다.",
+  {
+    "type": "education",
+    "title": "AWS클라우드 기반 SW융합 개발자 양성과정",
+    "company": "쌍용교육센터",
+    "desc": "Java와 Spring Framework를 중심으로 웹 애플리케이션의 백엔드 로직과 데이터베이스 연동(MyBatis, Oracle)을 학습하며, JSP, jQuery, Ajax와 같은 전통적인 프론트엔드 기술로 동적인 UI를 구현하는 방법을 익혔습니다. AWS RDS와 Heroku를 활용한 배포 과정을 통해 실제 서비스 환경을 경험했으며, Apache Tomcat과 Maven을 사용해 개발과 배포 환경을 구성하는 실습도 진행했습니다. 이 과정으로 웹 개발의 전반적인 흐름을 이해하고, 자바 풀스택의 기초를 다질 수 있었습니다.",
     "stack": [
-      "Ruby", "Ruby On Rails", "JavaScript", "Svelte", "PostgreSQL", "Ubuntu(Linux)", "Shopify"
+      "Java", "Spring", "Spring Boot", "AWS RDS", "MyBatis", "Oracle", "JSP", "jQuery", "Ajax", "Bootstrap", "Apache Tomcat", "Maven", "Heroku"
     ],
-    "date": "2023-2024"
+    "date": "2021-2021"
   }
-}
+]

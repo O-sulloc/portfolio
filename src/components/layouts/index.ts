@@ -1,4 +1,4 @@
-import Home from "./Home3";
+import Home from "./Home";
 import Navbar from "./Navbar";
 import Stack from "./Stack";
 import Project from "./Project";

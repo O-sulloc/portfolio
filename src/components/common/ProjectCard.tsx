@@ -1,7 +1,7 @@
-import { Chip, IconButton, Stack } from "@mui/material";
-import React from "react";
+import { IconButton } from "@mui/material";
 import { GitHub } from '@mui/icons-material';
 import { WebAsset } from '@mui/icons-material';
+import StackChips from './StackChips';
 
 type ProjectCardProps = {
   thumb: string,
@@ -19,11 +19,11 @@ const ProjectCard = ({ thumb, title, desc, stackList, siteLink, githubLink }: Pr
         <div>
           {siteLink ? (
             <a href={siteLink}>
-              <img src={thumb} className="project-thumb" />
+              <img src={thumb} className="project-thumb" alt={title} />
             </a>
           ) : (
             <a href={githubLink}>
-              <img src={thumb} className="project-thumb" />
+              <img src={thumb} className="project-thumb" alt={title} />
             </a>
           )}
         </div>
@@ -31,19 +31,7 @@ const ProjectCard = ({ thumb, title, desc, stackList, siteLink, githubLink }: Pr
         <div className="project-body">
           <h3 className="project-title">{title}</h3>
           <p className="project-desc">{desc}</p>
-          <Stack direction="row" className='stack-list-wrapper'>
-            {stackList.map((stack) => (
-              <Chip 
-                className='stack-chip'
-                key={stack}
-                label={stack}
-                sx={{ 
-                  textTransform: 'capitalize',
-                  '& .MuiChip-root': { margin: '10px' }
-                }} 
-              />
-            ))}
-          </Stack>
+          <StackChips items={stackList} />
           <div className="project-links">
             {/* if githubLink is empty, hide the github button */}
             {githubLink && (

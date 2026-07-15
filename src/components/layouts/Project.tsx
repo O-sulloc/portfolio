@@ -1,32 +1,32 @@
-import React from 'react';
+import { useMemo } from 'react';
 import ProjectCard from '../common/ProjectCard';
-import first from '/assets/proejct/thumb-1.png'
-import second from '/assets/proejct/thumb-2.png'
-import third from '/assets/proejct/thumb-3.png'
-import fourth from '/assets/proejct/jns.png'
 import { useTranslation } from 'react-i18next';
-
-type ProjectKey =  'first' | 'second' | 'third' | 'fourth';
-const projectKeys: ProjectKey[] = ['first', 'second', 'third', 'fourth'];
-const thumbMap: Record<ProjectKey, string> = { first, second, third, fourth };
+import enProject from '../../locales/en/project.json';
+import koProject from '../../locales/ko/project.json';
 
 const Project = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  // 현재 언어에 맞는 project 데이터를 가져옵니다
+  // 배열 형태로 되어 있어서 바로 사용 가능 (이미 최신 항목이 먼저 오도록 정렬됨)
+  const projectData = useMemo(() => {
+    return i18n.language === 'ko-KR' ? koProject : enProject;
+  }, [i18n.language]);
 
   return (
     <>
       <div className="project-section" id='project-section'>
-        <h1>Project</h1>
+        <h1>{t("navbar:project")}</h1>
         <div className='project-container'>
-          {projectKeys.slice(0).reverse().map((key) => (
+          {projectData.map((item) => (
             <ProjectCard
-              key={key}
-              thumb={thumbMap[key]}
-              title={t(`project:${key}:title`)}
-              desc={t(`project:${key}:desc`)}
-              stackList={t(`project:${key}:stackList`, {returnObjects: true}) as string[]}
-              siteLink={t(`project:${key}:siteLink`)}
-              githubLink={t(`project:${key}:githubLink`)}
+              key={item.title}
+              thumb={item.image}
+              title={item.title}
+              desc={item.desc}
+              stackList={item.stackList}
+              siteLink={item.siteLink}
+              githubLink={item.githubLink}
             />
           ))}
         </div>

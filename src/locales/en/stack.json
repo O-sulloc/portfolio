@@ -1,24 +1,27 @@
-{
-  "backend": {
+[
+  {
+    "key": "backend",
     "title": "Backend Development",
-    "desc": "Experienced in building robust server-side applications and RESTful APIs, with a strong foundation in object-oriented design. Skilled in PostgreSQL and MySQL for efficient database integration and optimization, and proficient in frameworks like Spring Boot and Ruby on Rails. Developed scalable, production-grade applications in Ruby and Java within Agile environments.",
+    "desc": "Experienced in building robust server-side applications and RESTful APIs, with a strong foundation in object-oriented design. Skilled in PostgreSQL and MySQL for efficient database integration and optimization, and proficient in frameworks like Spring Boot and Ruby on Rails. Developed scalable, production-grade applications in Ruby and Java within Agile environments. Recently expanded expertise to modern JavaScript runtime environments and serverless architectures.",
     "stackList": [
       "Ruby", "Java", "Node.js", "Spring Boot", "JPA", "PostgreSQL", "MySQL"
     ]
   },
-  "front": {
+  {
+    "key": "front",
     "title": "Frontend Development",
-    "desc": "Experienced in SSR and CSR implementation for seamless user interaction and optimized performance. Proficient in Svelte and JavaScript, with commercial exposure, and experienced in developing reusable components using React. A solid understanding of JavaScript fundamentals and modern language features allows me to build responsive, accessible, and scalable front-end code with a strong emphasis on detail and usability.",
+    "desc": "Experienced in SSR and CSR implementation for seamless user interaction and optimized performance. Proficient in Svelte and JavaScript, with commercial exposure, and experienced in developing reusable components using React. A solid understanding of JavaScript fundamentals and modern language features allows me to build responsive, accessible, and scalable front-end code with a strong emphasis on detail and usability. Recently delivered a complete website redesign using modern React ecosystem with advanced animations and SEO optimization.",
     "stackList": [
-      "JavaScript", "TypeScript", "React", "Svelte", "HTML5", "CSS3", "Material-UI", "Bootstrap", "JSP", "jQuery"
+      "JavaScript", "TypeScript", "React", "Next.js", "Svelte", "HTML5", "CSS3", "Tailwind CSS", "Framer Motion", "GSAP", "React Hook Form"
     ]
   },
-  "devOps": {
+  {
+    "key": "devOps",
     "title": "DevOps",
-    "desc": "Streamlined the development process through automation, continuous integration, and continuous delivery using industry-standard tools and platforms",
+    "desc": "Streamlined the development process through automation, continuous integration, and continuous delivery using industry-standard tools and platforms. Experienced in modern deployment platforms and performance monitoring tools for production applications.",
     "stackList": [
-      "AWS", "Docker", "Kubernetes", "Linux", "Git", "GitHub Actions", "GitLab CI/CD"
+      "AWS", "Docker", "Kubernetes", "Linux", "Git", "GitHub Actions", "GitLab CI/CD", "Vercel", "Google Tag Manager", "Vercel Analytics", "Google Analytics"
     ]
   }
-}
+]
 
