@@ -9,8 +9,8 @@
     "confirm": "Are you sure you want to send the email?",
     "yes": "Yes",
     "no": "No",
-    "success": "Email sent successfully!", 
-    "error": "Failed to send email. Please try again later."  
+    "success": "Email sent successfully!",
+    "error": "Failed to send email. Please try again later."
   },
   "contact": {
     "title": "Contact Detail",

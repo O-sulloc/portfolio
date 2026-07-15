@@ -5,7 +5,16 @@
     "company": "The Cocktail Lab",
     "desc": "As the sole developer responsible for the complete redesign and rebuild of The Cocktail Lab's website, I transformed their digital presence using cutting-edge web technologies. Implemented advanced animation systems using GSAP ScrollTrigger and Framer Motion, created sophisticated multi-step contact forms with real-time validation, and optimized for SEO with comprehensive structured data implementation. The project showcased my ability to deliver production-ready applications with modern UX/UI standards and accessibility compliance.",
     "stack": [
-      "Next.js 15", "React 19", "TypeScript", "Tailwind CSS", "GSAP", "Framer Motion", "React Hook Form", "Zod", "Vercel", "SEO"
+      "Next.js 15",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS",
+      "GSAP",
+      "Framer Motion",
+      "React Hook Form",
+      "Zod",
+      "Vercel",
+      "SEO"
     ],
     "date": "2025-present"
   },
@@ -15,7 +24,13 @@
     "company": "Joseph and Stacey",
     "desc": "At Joseph and Stacey, I contributed as a Full-Stack Developer, building and maintaining ERP and e-commerce systems using Svelte and Ruby. I worked closely with cross-functional teams to design user-centric interfaces, optimize database structures, and implement solutions that enhanced operational efficiency and system reliability. This experience sharpened my ability to adapt quickly, solve complex problems, and deliver meaningful results.",
     "stack": [
-      "Ruby", "Ruby On Rails", "JavaScript", "Svelte", "PostgreSQL", "Ubuntu(Linux)", "Shopify"
+      "Ruby",
+      "Ruby On Rails",
+      "JavaScript",
+      "Svelte",
+      "PostgreSQL",
+      "Ubuntu(Linux)",
+      "Shopify"
     ],
     "date": "2023-2024"
   },
@@ -25,7 +40,19 @@
     "company": "LikeLion",
     "desc": "This bootcamp was focused on modern web development practices and advanced tools. I deepened my knowledge of backend development by learning Spring Security for authentication and authorization, JPA for data management, and JUnit for testing. I also gained hands-on experience with JWT for secure communication and Swagger for automated API documentation. The course included server-side rendering with Thymeleaf and introduced me to containerized deployment using Docker and Kubernetes, as well as cloud environment management with AWS EC2. Additionally, I learned how to test APIs using Postman and streamline the build process with Gradle. This program helped me strengthen my skills with cutting-edge technologies and efficient workflows.",
     "stack": [
-      "Java", "Spring Security", "JPA", "Docker", "Kubernetes", "AWS EC2", "MySQL", "JWT", "JUnit", "Gradle", "Thymeleaf", "Postman", "Swagger"
+      "Java",
+      "Spring Security",
+      "JPA",
+      "Docker",
+      "Kubernetes",
+      "AWS EC2",
+      "MySQL",
+      "JWT",
+      "JUnit",
+      "Gradle",
+      "Thymeleaf",
+      "Postman",
+      "Swagger"
     ],
     "date": "2022-2023"
   },
@@ -35,7 +62,19 @@
     "company": "SSangyong Institute of System Technology",
     "desc": "During this bootcamp, I gained a solid foundation in web development. I learned to build backend logic using Java and the Spring Framework, integrating databases with MyBatis and Oracle. On the frontend, I used JSP, jQuery, and Ajax to create dynamic and interactive user interfaces, along with Bootstrap for responsive design. The program also introduced me to deploying applications on AWS RDS and Heroku, while managing development environments with Apache Tomcat and Maven. This course provided a comprehensive understanding of the web development process, with a focus on traditional and widely-used technologies.",
     "stack": [
-      "Java", "Spring", "Spring Boot", "AWS RDS", "MyBatis", "Oracle", "JSP", "jQuery", "Ajax", "Bootstrap", "Apache Tomcat", "Maven", "Heroku"
+      "Java",
+      "Spring",
+      "Spring Boot",
+      "AWS RDS",
+      "MyBatis",
+      "Oracle",
+      "JSP",
+      "jQuery",
+      "Ajax",
+      "Bootstrap",
+      "Apache Tomcat",
+      "Maven",
+      "Heroku"
     ],
     "date": "2021-2021"
   }

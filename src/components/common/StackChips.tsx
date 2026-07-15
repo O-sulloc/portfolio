@@ -9,12 +9,7 @@ type StackChipsProps = {
 const StackChips = ({ items, variant = 'filled' }: StackChipsProps) => (
   <Stack direction="row" className="stack-list-wrapper">
     {items.map((stack) => (
-      <Chip
-        className="stack-chip"
-        key={stack}
-        label={stack}
-        variant={variant}
-      />
+      <Chip className="stack-chip" key={stack} label={stack} variant={variant} />
     ))}
   </Stack>
 );

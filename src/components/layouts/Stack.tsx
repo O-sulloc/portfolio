@@ -18,9 +18,9 @@ const Stack = () => {
 
   return (
     <>
-      <section className="stack-section" id='stack-section'>
-        <h1>{t("navbar:stack")}</h1>
-        <div className='stack-container'>
+      <section className="stack-section" id="stack-section">
+        <h1>{t('navbar:stack')}</h1>
+        <div className="stack-container">
           {stackData.map((item) => (
             <StackCard
               key={item.key}
@@ -31,10 +31,9 @@ const Stack = () => {
             />
           ))}
         </div>
-
       </section>
     </>
-  )
-}
+  );
+};
 
 export default Stack;

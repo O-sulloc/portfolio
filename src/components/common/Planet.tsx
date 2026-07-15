@@ -34,7 +34,7 @@ const Planet = () => {
   }, []);
 
   return (
-    <div className='planet-container'>
+    <div className="planet-container">
       <Canvas
         camera={{
           fov: 45,

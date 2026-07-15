@@ -1,18 +1,18 @@
-import { IconButton } from "@mui/material";
+import { IconButton } from '@mui/material';
 import { GitHub } from '@mui/icons-material';
 import { WebAsset } from '@mui/icons-material';
 import StackChips from './StackChips';
 
 type ProjectCardProps = {
-  thumb: string,
-  title: string,
-  desc: string,
-  stackList: string[],
-  siteLink: string,
-  githubLink: string,
-}
+  thumb: string;
+  title: string;
+  desc: string;
+  stackList: string[];
+  siteLink: string;
+  githubLink: string;
+};
 
-const ProjectCard = ({ thumb, title, desc, stackList, siteLink, githubLink }: ProjectCardProps ) => {
+const ProjectCard = ({ thumb, title, desc, stackList, siteLink, githubLink }: ProjectCardProps) => {
   return (
     <div className="project-wrapper">
       <div className="project-content">
@@ -27,7 +27,7 @@ const ProjectCard = ({ thumb, title, desc, stackList, siteLink, githubLink }: Pr
             </a>
           )}
         </div>
-        
+
         <div className="project-body">
           <h3 className="project-title">{title}</h3>
           <p className="project-desc">{desc}</p>
@@ -35,22 +35,21 @@ const ProjectCard = ({ thumb, title, desc, stackList, siteLink, githubLink }: Pr
           <div className="project-links">
             {/* if githubLink is empty, hide the github button */}
             {githubLink && (
-              <IconButton aria-label='github' href={githubLink}>
+              <IconButton aria-label="github" href={githubLink}>
                 <GitHub />
               </IconButton>
             )}
             {/* if siteLink is empty, hide the site button */}
             {siteLink && (
-              <IconButton aria-label='site' href={siteLink}>
+              <IconButton aria-label="site" href={siteLink}>
                 <WebAsset />
               </IconButton>
             )}
           </div>
         </div>
-
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default ProjectCard;

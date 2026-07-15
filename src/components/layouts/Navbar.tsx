@@ -6,7 +6,15 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import { Divider, Drawer, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
+import {
+  Divider,
+  Drawer,
+  List,
+  ListItem,
+  ListItemButton,
+  ListItemIcon,
+  ListItemText,
+} from '@mui/material';
 import TranslateIcon from '@mui/icons-material/Translate';
 import { useTranslation } from 'react-i18next';
 
@@ -17,10 +25,10 @@ const ResponsiveNavBar = () => {
   const currentLanguage = i18n.language;
 
   const languageSwitchHandler = () => {
-    i18n.changeLanguage(currentLanguage === "en-US" ? "ko-KR" : "en-US");
+    i18n.changeLanguage(currentLanguage === 'en-US' ? 'ko-KR' : 'en-US');
   };
 
-  // mobile drawer navigation 
+  // mobile drawer navigation
   const [open, setOpen] = React.useState(false);
 
   const toggleDrawer = (newOpen: boolean) => () => {
@@ -30,13 +38,13 @@ const ResponsiveNavBar = () => {
   const drawer = (
     <Box sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
       <div className="mobile-menu-top">
-        <ListItemIcon/>
+        <ListItemIcon />
       </div>
       <Divider />
       <List>
         {pages.map((page) => (
           <ListItem key={page} disablePadding>
-            <ListItemButton component='a' href={`#${page}-section`} >
+            <ListItemButton component="a" href={`#${page}-section`}>
               <ListItemText primary={t(`navbar:${page}`)} />
             </ListItemButton>
           </ListItem>
@@ -46,21 +54,20 @@ const ResponsiveNavBar = () => {
   );
 
   return (
-    <AppBar position="sticky" className='navigation-bar'>
-      <Container maxWidth="xl" >
+    <AppBar position="sticky" className="navigation-bar">
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
-          
           {/* PC Navbar */}
           {/* icon */}
-          <Box 
-            sx={{ 
+          <Box
+            sx={{
               flexGrow: {
                 xs: 0, // mobile
                 md: 1, // pc
               },
-
-          }}>
-            <IconButton onClick={languageSwitchHandler} aria-label='translate-icon' size='large'>
+            }}
+          >
+            <IconButton onClick={languageSwitchHandler} aria-label="translate-icon" size="large">
               <TranslateIcon />
             </IconButton>
           </Box>
@@ -86,14 +93,14 @@ const ResponsiveNavBar = () => {
               onClick={toggleDrawer(true)}
               color="inherit"
             >
-              <MenuIcon color='disabled' />
+              <MenuIcon color="disabled" />
             </IconButton>
             <Drawer
               open={open}
               onClose={toggleDrawer(false)}
-              ModalProps={{ keepMounted: true}}
+              ModalProps={{ keepMounted: true }}
               sx={{
-                display: { xs: 'block', md: 'none' }
+                display: { xs: 'block', md: 'none' },
               }}
             >
               {drawer}
@@ -103,5 +110,5 @@ const ResponsiveNavBar = () => {
       </Container>
     </AppBar>
   );
-}
+};
 export default ResponsiveNavBar;

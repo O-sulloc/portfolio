@@ -10,45 +10,47 @@ const Home = () => {
   const { t } = useTranslation();
   return (
     <>
-      <div className='blob-first'></div>
-      <div className='blob-second'></div>
-      <section className="home" id='home-section'>
-
-        <div className='information'>
-          <div className='name-wrapper'>
-            <h1 className='home-name animate__animated animate__fadeInUp'>
+      <div className="blob-first"></div>
+      <div className="blob-second"></div>
+      <section className="home" id="home-section">
+        <div className="information">
+          <div className="name-wrapper">
+            <h1 className="home-name animate__animated animate__fadeInUp">
               {/* Jeonghyeon Kim */}
-              {t("home:name")}
+              {t('home:name')}
             </h1>
           </div>
 
-          <div className='home-brief'>
-            <div className='title animate__animated animate__fadeInRight'>
-              <p>{t("home:desc")}</p>
+          <div className="home-brief">
+            <div className="title animate__animated animate__fadeInRight">
+              <p>{t('home:desc')}</p>
             </div>
 
-            <div className='image-wrapper animate__animated animate__fadeInUp'>
-              <div className='social-icon animate__animated animate__fadeInDown'>
-                <IconButton aria-label='github' href='https://github.com/O-sulloc'>
+            <div className="image-wrapper animate__animated animate__fadeInUp">
+              <div className="social-icon animate__animated animate__fadeInDown">
+                <IconButton aria-label="github" href="https://github.com/O-sulloc">
                   <GitHub fontSize="large" />
                 </IconButton>
-                <IconButton aria-label='linkedin' sx={{ '&:hover': { color: 'social.linkedin' } }} href='https://www.linkedin.com/in/jeonghyeon-kim-11b874202/'>
+                <IconButton
+                  aria-label="linkedin"
+                  sx={{ '&:hover': { color: 'social.linkedin' } }}
+                  href="https://www.linkedin.com/in/jeonghyeon-kim-11b874202/"
+                >
                   <LinkedIn fontSize="large" />
                 </IconButton>
               </div>
-              
-              <img src={me} className='home-image' alt={t("home:name")} />
+
+              <img src={me} className="home-image" alt={t('home:name')} />
             </div>
 
-            <div className='location animate__animated animate__fadeInLeft'>
-              <p>{t("home:location")}</p>
+            <div className="location animate__animated animate__fadeInLeft">
+              <p>{t('home:location')}</p>
             </div>
           </div>
         </div>
-
       </section>
     </>
-  )
-}
+  );
+};
 
 export default Home;

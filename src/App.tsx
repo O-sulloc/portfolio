@@ -4,8 +4,8 @@ import './App.css';
 const App = () => {
   return (
     <div className="container">
-      <div className='blob-wrapper'>
-        <div className='blob'></div>
+      <div className="blob-wrapper">
+        <div className="blob"></div>
       </div>
       <Navbar />
       <Home />
@@ -14,7 +14,7 @@ const App = () => {
       <Project />
       <Contact />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

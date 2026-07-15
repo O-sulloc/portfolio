@@ -18,12 +18,12 @@ const Experience = () => {
 
   return (
     <>
-      <div className="experience-section" id='experience-section'>
-        <h1>{t("navbar:experience")}</h1>
+      <div className="experience-section" id="experience-section">
+        <h1>{t('navbar:experience')}</h1>
         <VerticalTimeline
-          animate={ true }
-          className={ 'experience-timeline' }
-          lineColor={ theme.palette.surface.main }
+          animate={true}
+          className={'experience-timeline'}
+          lineColor={theme.palette.surface.main}
         >
           {experienceData.map((item) => (
             <ExperienceCard
@@ -39,7 +39,7 @@ const Experience = () => {
         </VerticalTimeline>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default Experience;

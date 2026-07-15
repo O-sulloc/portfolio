@@ -15,9 +15,9 @@ const Project = () => {
 
   return (
     <>
-      <div className="project-section" id='project-section'>
-        <h1>{t("navbar:project")}</h1>
-        <div className='project-container'>
+      <div className="project-section" id="project-section">
+        <h1>{t('navbar:project')}</h1>
+        <div className="project-container">
           {projectData.map((item) => (
             <ProjectCard
               key={item.title}
@@ -32,7 +32,7 @@ const Project = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
 export default Project;
