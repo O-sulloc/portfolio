@@ -1,9 +1,11 @@
-import React, { useRef, useState } from 'react';
+import React, { lazy, Suspense, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Alert, Button, Dialog, DialogActions, DialogTitle, IconButton, Snackbar, SnackbarCloseReason, SnackbarOrigin } from '@mui/material';
-import Planet from '../common/Planet';
 import { GitHub, LinkedIn } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
+
+// 무거운 three.js 3D 씬은 초기 번들에서 분리해 지연 로딩
+const Planet = lazy(() => import('../common/Planet'));
 
 // snackbar position (fixed)
 const snackbarPosition: SnackbarOrigin = { vertical: 'top', horizontal: 'center' };
@@ -127,7 +129,9 @@ const Contact = () => {
 
           <div className='contact-image-wrapper'>
             <p className='bubble-message'>{t("contact:try")}</p>
-            <Planet />
+            <Suspense fallback={<div className='planet-container' />}>
+              <Planet />
+            </Suspense>
           </div>
         </div>
 
