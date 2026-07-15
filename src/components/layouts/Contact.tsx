@@ -1,5 +1,4 @@
-import React, { lazy, Suspense, useRef, useState } from 'react';
-import emailjs from '@emailjs/browser';
+import { lazy, Suspense } from 'react';
 import {
   Alert,
   Button,
@@ -8,11 +7,11 @@ import {
   DialogTitle,
   IconButton,
   Snackbar,
-  SnackbarCloseReason,
-  SnackbarOrigin,
 } from '@mui/material';
+import type { SnackbarOrigin } from '@mui/material';
 import { GitHub, LinkedIn } from '@mui/icons-material';
 import { useTranslation } from 'react-i18next';
+import { useContactForm } from '../../hooks/useContactForm';
 
 // 무거운 three.js 3D 씬은 초기 번들에서 분리해 지연 로딩
 const Planet = lazy(() => import('../common/Planet'));
@@ -22,68 +21,17 @@ const snackbarPosition: SnackbarOrigin = { vertical: 'top', horizontal: 'center'
 
 const Contact = () => {
   const { t } = useTranslation();
-
-  const [dialogOpen, setDialogOpen] = useState(false);
-  const [emailStatus, setEmailStatus] = useState<null | 'success' | 'error'>(null);
-  const [snackbarOpen, setSnackbarOpen] = useState(false);
-
-  const form = useRef<HTMLFormElement>(null);
-
-  // Send 버튼 클릭 시 다이얼로그를 열도록 수정
-  const handleSubmitBtn = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    e.preventDefault(); // 폼 제출 방지
-    setDialogOpen(true);
-  };
-  const handleDialogClose = () => {
-    setDialogOpen(false);
-  };
-
-  // Yes 버튼 클릭 시 폼 제출 이벤트 트리거
-  const handleSendYes = () => {
-    setDialogOpen(false);
-
-    if (form.current) {
-      form.current.requestSubmit(); // 폼 제출 이벤트 트리거
-    }
-  };
-
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!form.current) {
-      console.error('Form reference is not set.');
-      return;
-    }
-
-    emailjs
-      .sendForm(
-        import.meta.env.VITE_APP_SERVICE_ID,
-        import.meta.env.VITE_APP_TEMPLATE_ID,
-        form.current,
-        import.meta.env.VITE_APP_PUBLIC_KEY,
-      )
-      .then(
-        (result) => {
-          setEmailStatus(result.status === 200 ? 'success' : 'error');
-          setSnackbarOpen(true);
-        },
-        (error) => {
-          console.error('Failed to send email:', error);
-          setEmailStatus('error');
-          setSnackbarOpen(true);
-        },
-      );
-  };
-
-  const handleSnackbarClose = (
-    _event?: React.SyntheticEvent | Event,
-    reason?: SnackbarCloseReason,
-  ) => {
-    if (reason === 'clickaway') {
-      return;
-    }
-    setSnackbarOpen(false);
-  };
+  const {
+    form,
+    dialogOpen,
+    emailStatus,
+    snackbarOpen,
+    openDialog,
+    closeDialog,
+    confirmSend,
+    sendEmail,
+    closeSnackbar,
+  } = useContactForm();
 
   return (
     <>
@@ -118,19 +66,19 @@ const Contact = () => {
                   required
                 />
               </div>
-              <button className="contact-button" onClick={handleSubmitBtn}>
+              <button className="contact-button" onClick={openDialog}>
                 {t('contact:placeholder:send')}
               </button>
               <Dialog
                 open={dialogOpen}
-                onClose={handleDialogClose}
+                onClose={closeDialog}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
               >
                 <DialogTitle id="alert-dialog-title">{t('contact:email:confirm')}</DialogTitle>
                 <DialogActions>
-                  <Button onClick={handleDialogClose}>{t('contact:email:no')}</Button>
-                  <Button onClick={handleSendYes} autoFocus>
+                  <Button onClick={closeDialog}>{t('contact:email:no')}</Button>
+                  <Button onClick={confirmSend} autoFocus>
                     {t('contact:email:yes')}
                   </Button>
                 </DialogActions>
@@ -171,15 +119,15 @@ const Contact = () => {
         <Snackbar
           open={snackbarOpen}
           autoHideDuration={5000}
-          onClose={handleSnackbarClose}
+          onClose={closeSnackbar}
           anchorOrigin={snackbarPosition}
         >
           {emailStatus === 'success' ? (
-            <Alert onClose={handleSnackbarClose} severity="success" sx={{ width: '100%' }}>
+            <Alert onClose={closeSnackbar} severity="success" sx={{ width: '100%' }}>
               {t('contact:email:success')}
             </Alert>
           ) : (
-            <Alert onClose={handleSnackbarClose} severity="error" sx={{ width: '100%' }}>
+            <Alert onClose={closeSnackbar} severity="error" sx={{ width: '100%' }}>
               {t('contact:email:error')}
             </Alert>
           )}
