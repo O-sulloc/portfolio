@@ -45,6 +45,8 @@ html {
   align-items: center;
   justify-items: center;
   font-size: 3em;
+  /* 이름과 동일한 폰트로 통일 */
+  font-family: 'Playfair Display SC', serif;
 }
 
 .image-wrapper {
@@ -418,8 +420,8 @@ h1 {
 }
 
 .project-wrapper:hover {
-  background-color: #eed8ee;
-  background-image: linear-gradient(25deg, #eed8ee 0%, #eee5e5 100%);
+  background-color: #eef2ff;
+  background-image: linear-gradient(25deg, #eef2ff 0%, #f5f3ff 100%);
 
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
