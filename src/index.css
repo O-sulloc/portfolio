@@ -4,6 +4,13 @@
     'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
     system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
     'Noto Sans KR', 'Malgun Gothic', sans-serif;
+
+  /* 타입 스케일 (rem 기반 모듈러 스케일 ~1.25) — 위계 리듬 통일 */
+  --fs-section-title: 2.5rem; /* 40px — 섹션 제목(Stack/Experience/...) */
+  --fs-card-title: 1.5rem; /* 24px — 스택/프로젝트 카드 제목 */
+  --fs-body: 1rem; /* 16px — 본문 */
+  --lh-tight: 1.15; /* 제목 행간 */
+  --lh-body: 1.6; /* 본문 행간 */
 }
 
 body {
