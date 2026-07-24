@@ -31,9 +31,11 @@ const theme = createTheme({
     ].join(','),
   },
   palette: {
-    // 타임라인 라인/카드 배경 등에 쓰이는 회색 표면
+    // NOTE: 아래 색은 src/index.css 의 --color-* 토큰과 값이 동일해야 함 (동기화 유지).
+    //       MUI theme(JS)는 CSS 변수를 읽지 못해 값을 미러링한다.
+    // 타임라인 라인/카드 배경 등에 쓰이는 회색 표면 (= --color-surface)
     surface: { main: '#f8f9fa' },
-    // Experience 아이콘 배경 (경력=인디고 / 학력=티일) — 채도 낮춘 통일 톤
+    // Experience 아이콘 배경 (경력=인디고 --color-accent / 학력=티일 --color-accent-2)
     timeline: { work: '#4f46e5', education: '#0d9488' },
     // 소셜 아이콘 hover 색 (플랫폼별 유지)
     social: { github: 'black', linkedin: 'blue' },
