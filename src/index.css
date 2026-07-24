@@ -11,6 +11,19 @@
   --fs-body: 1rem; /* 16px — 본문 */
   --lh-tight: 1.15; /* 제목 행간 */
   --lh-body: 1.6; /* 본문 행간 */
+
+  /* 레이아웃 — 콘텐츠 폭/여백 통일 (Navbar Container lg=1200 과 정렬) */
+  --content-max: 1200px; /* 콘텐츠 컬럼 최대 폭 */
+  --gutter: 24px; /* 좌우 거터 (MUI Container 기본값과 일치) */
+  --section-pad-y: 6rem; /* 섹션 상하 리듬 */
+}
+
+/* 모바일에선 상하 리듬/거터 축소 */
+@media (max-width: 768px) {
+  :root {
+    --section-pad-y: 4rem;
+    --gutter: 20px;
+  }
 }
 
 body {

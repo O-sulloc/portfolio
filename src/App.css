@@ -284,6 +284,17 @@ h1:not(.home-name) {
   padding-bottom: 30px;
 }
 
+/* 콘텐츠 섹션 공통 컨테이너 — 중앙 정렬 + 폭/여백 통일 (히어로 제외) */
+.stack-section,
+.experience-section,
+.project-section,
+.contact-section {
+  box-sizing: border-box;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding: var(--section-pad-y) var(--gutter);
+}
+
 /* navigation */
 .navigation-bar {
   background-color: white !important;
@@ -291,7 +302,6 @@ h1:not(.home-name) {
 
 /* ============ stack section css ============ */
 .stack-section {
-  padding: 10%;
   /* background-color:#FFF0A4; */
 }
 
@@ -358,7 +368,6 @@ h1:not(.home-name) {
 
 /* ============ experience css ============ */
 .experience-section {
-  padding: 7% 10%;
 }
 
 /* timeline */
@@ -377,7 +386,6 @@ h1:not(.home-name) {
   display: flex;
   flex-direction: column;
   text-align: left;
-  padding: 7% 10%;
 }
 
 .project-container {
@@ -465,7 +473,6 @@ h1:not(.home-name) {
 
 /* ============ contact css ============ */
 .contact-section {
-  padding: 5% 10%;
   /* min-height: 80vh; */
 }
 
