@@ -3,20 +3,165 @@
     "type": "work",
     "title": "Full Stack Developer",
     "company": "The Cocktail Lab",
-    "desc": "As the sole developer responsible for the complete redesign and rebuild of The Cocktail Lab's website, I transformed their digital presence using cutting-edge web technologies. Implemented advanced animation systems using GSAP ScrollTrigger and Framer Motion, created sophisticated multi-step contact forms with real-time validation, and optimized for SEO with comprehensive structured data implementation. The project showcased my ability to deliver production-ready applications with modern UX/UI standards and accessibility compliance.",
+    "desc": "As the sole developer, I led the complete rebuild of the company's website, migrating from a <a href=\"https://thecocktai1dev.wpenginepowered.com/\" target=\"_blank\" rel=\"noopener noreferrer\">legacy WordPress site</a> to a <a href=\"https://thecocktaillab.co.uk/\" target=\"_blank\" rel=\"noopener noreferrer\">modern Next.js 15 and React 19 build</a>, owning the project end to end across design, frontend, backend, and deployment.<br /><br />The rebuild was judged on outcomes, not tech. Web-form enquiries roughly doubled year over year and the on-site conversion rate more than doubled, from about 1.3% to about 3.0%, adding up to around 1,300 genuine enquiries in the first year. I carried search rankings through the migration and grew organic clicks around 3x in the most recent quarter, and made the site citeable by AI assistants such as ChatGPT and Claude. Along the way, reconciling conversions against the database exposed that analytics had been under-reporting them by around 40%, giving the business an accurate view of real demand for the first time.",
     "stack": [
       "Next.js 15",
       "React 19",
       "TypeScript",
       "Tailwind CSS",
-      "GSAP",
       "Framer Motion",
       "React Hook Form",
       "Zod",
+      "Postgres",
+      "Resend",
+      "SEO",
+      "JSON",
+      "GTM",
       "Vercel",
-      "SEO"
+      "Odoo"
     ],
-    "date": "2025-present"
+    "date": "2025-present",
+    "caseStudies": [
+      {
+      "teaserTitle": "Website rebuild",
+      "teaserBlurb": "The site that captures demand",
+      "tagline": "Sole developer on a full migration from a legacy WordPress site to a Next.js 15 / React 19 rebuild, owned across design, frontend, backend, and deployment.",
+      "liveUrl": "https://thecocktaillab.co.uk/",
+      "legacyUrl": "https://thecocktai1dev.wpenginepowered.com/",
+      "cover": "/assets/casestudy/cocktaillab/live-home.png",
+      "highlights": [
+        {
+          "value": "≈2×",
+          "label": "web-form enquiries, year on year",
+          "note": "389 → 777 on identical GA4 measurement"
+        },
+        {
+          "value": "3.0%",
+          "label": "on-site conversion rate",
+          "note": "2.4× the legacy site's ~1.3%"
+        },
+        {
+          "value": "25",
+          "label": "enquiries direct from ChatGPT & Claude",
+          "note": "AI search, verified in the database. GA4 logged only 17 sessions"
+        }
+      ],
+      "enquiryStat": {
+        "value": "~1,300",
+        "label": "genuine web-form enquiries in year one. Phone and WhatsApp counted separately",
+        "asOf": "Postgres ground truth · Sep 2025 – Jul 2026"
+      },
+      "lighthouseNote": "Lighthouse, desktop preset",
+      "lighthouse": [
+        { "metric": "Accessibility", "before": 89, "after": 100 },
+        { "metric": "Best Practices", "before": 56, "after": 78 },
+        { "metric": "SEO", "before": 69, "after": 92 }
+      ],
+      "pages": [
+        {
+          "name": "Home",
+          "before": "/assets/casestudy/cocktaillab/legacy-home.png",
+          "after": "/assets/casestudy/cocktaillab/live-home.png",
+          "note": "Reworked the hero into a cinematic, single-focus above-the-fold with a clear primary CTA and trust signals, replacing the flat legacy header."
+        },
+        {
+          "name": "Our Bars",
+          "before": "/assets/casestudy/cocktaillab/legacy-bars.png",
+          "after": "/assets/casestudy/cocktaillab/live-bars.png",
+          "note": "Turned a single stock hero into a browsable, categorised bar collection so visitors can pick a style rather than read a wall of text."
+        },
+        {
+          "name": "Contact / Enquiry",
+          "before": "/assets/casestudy/cocktaillab/legacy-contact.png",
+          "after": "/assets/casestudy/cocktaillab/live-contact.png",
+          "note": "Replaced a basic contact form with a structured, validated enquiry flow that captures event date, guest count, service type, and attribution up front."
+        },
+        {
+          "name": "Reviews",
+          "before": "/assets/casestudy/cocktaillab/legacy-reviews.png",
+          "after": "/assets/casestudy/cocktaillab/live-reviews.png",
+          "note": "Consolidated scattered testimonials into a clean, scannable reviews page that surfaces social proof consistently."
+        }
+      ],
+      "sections": [
+        {
+          "heading": "The problem",
+          "body": "The legacy WordPress site read as a set of disconnected templates, converted poorly, and gave the business no reliable picture of where its enquiries came from. I owned the rebuild end to end, and treated it as a product problem rather than a redesign: make the site convert, make it rank, and make every result measurable."
+        },
+        {
+          "heading": "A design system, not just pages",
+          "body": "Rather than restyle pages one by one, I built a documented design system covering the brand's colour, motion, and typography, its CTA hierarchy, and its section and surface patterns, then rebuilt every page against it. New pages now look on-brand by default, and the site reads as one coherent premium product. I also separated all copy and listings from the components that render them, so the client's team can edit text or add a bar without touching code or breaking the design, keeping the site cheap to maintain long after handover."
+        },
+        {
+          "heading": "Turning visits into enquiries",
+          "body": "The old contact form was a black box: enquiries arrived as unstructured emails with no record of which channel produced them. I rebuilt it into a validated, spam-resistant enquiry flow that captures each lead's event details and traffic source, stores every submission reliably, and notifies the team instantly. Web-form enquiries roughly doubled year over year and the on-site conversion rate more than doubled, from about 1.3% to about 3.0%. Reconciling the stored records against Google Analytics then revealed the dashboard was under-counting conversions by around 40% because of ad-blocking and consent loss, so for the first time the business could see true demand: about 1,300 genuine web-form enquiries in year one, with phone and WhatsApp on top."
+        },
+        {
+          "heading": "Protecting rankings, then growing them",
+          "body": "A WordPress-to-Next.js migration can wipe out years of search equity overnight. I mapped 118 legacy URLs to their new homes so rankings carried across, and in the most recent quarter Google Search Console shows organic clicks up around 3x year over year and impressions around 2x, with average position improved from about 33 to about 20 (mobile from 35 to 12). The structured data I implemented put recipe and review rich results into Google where there were none before."
+        },
+        {
+          "heading": "An early bet on AI search",
+          "body": "I added an llms.txt and LLM-readable markup so AI assistants can read and cite the site, then verified the payoff at the database level: 25 enquiries came directly from ChatGPT and Claude, a channel Google Analytics had logged as just 17 sessions. Measuring conversions against server-side records, rather than trusting the dashboard, is what turned AI search from a guess into a proven acquisition channel."
+        }
+      ]
+      },
+      {
+        "teaserTitle": "Odoo ERP & operations",
+        "teaserBlurb": "The system that runs on it",
+        "tagline": "The same enquiry the website captures lands here as a structured lead, then runs all the way to delivery on one system I designed, built, and operate.",
+        "diagram": {
+          "stages": [
+            { "label": "Website enquiry", "sub": "Next.js form" },
+            { "label": "CRM lead", "sub": "via XML-RPC" },
+            { "label": "Quotation builder", "sub": "live pricing" },
+            { "label": "Sale order", "sub": "customer portal" },
+            { "label": "Event registration", "sub": "portal form" },
+            { "label": "Stock-aware picking", "sub": "real inventory" },
+            { "label": "Delivery & collection", "sub": "driver portals" }
+          ],
+          "notes": [
+            "UTM attribution flows in with every lead",
+            "One source of truth — sales and warehouse share it"
+          ]
+        },
+        "highlights": [
+          {
+            "value": "5 → 1",
+            "label": "disconnected tools replaced by one system",
+            "note": "paper, calculator + email, Zoho, SharePoint, a recipe tool → Odoo"
+          },
+          {
+            "value": "Enquiry → invoice",
+            "label": "one pipeline, front of house to back",
+            "note": "a web form lands as a structured CRM lead, automatically"
+          },
+          {
+            "value": "Solo",
+            "label": "requirements to production",
+            "note": "designed, built, deployed, and still operated single-handedly"
+          }
+        ],
+        "sections": [
+          {
+            "heading": "The problem — a business run by hand",
+            "body": "The Cocktail Lab ran on paper and disconnected tools. Enquiries were copied onto paper; quotes were worked out on a calculator and typed number-by-number into an email; invoices were hand-built in Zoho; the registration form lived in SharePoint; and picking relied on a recipe tool that was not connected to stock — it listed generic ingredients like 'vodka 500ml', so pickers did not know which of many bottles to pull and had no stock visibility, leading to last-minute panic buying on the event day. Worst of all, sales and logistics worked off different systems that never talked: when a menu, guest count, or event time changed in SharePoint, the warehouse never heard about it."
+          },
+          {
+            "heading": "The process — no PM, no spec, just the people doing the work",
+            "body": "With no product manager or analyst, I sat with the sales lead, the warehouse lead, and the owner and had them walk me through how the business actually ran. From those conversations I mapped the real workflow and picked out the steps worth automating or moving into a system. I treated it as a solutions-architecture problem: translate a paper-and-calculator workflow into one coherent system, owned end to end from requirements to production."
+          },
+          {
+            "heading": "The solution — one pipeline, enquiry to delivery",
+            "body": "I built two custom Odoo modules (~10k lines) that form a single pipeline. A website enquiry now arrives over XML-RPC as a structured CRM lead — event date, guests, postcode, service type, and UTM attribution all mapped automatically, and designed lead-first so a slow or unavailable ERP never costs a lead. From there a quotation builder generates multi-package quotes from live product pricing, with no hardcoded rates, that customers accept through a portal. A stock-aware picking engine then turns each event's menu and bar setup into a real picking list against actual inventory, with unit conversion and serial and expiry tracking, so pickers pull specific bottles instead of guessing. Because everything lives in one system, a change sales makes to a menu or time propagates to the warehouse automatically — the silo is gone. It is self-hosted on Docker with matched production and development environments."
+          },
+          {
+            "heading": "The result",
+            "body": "The business went from five disconnected manual tools to one system that carries an event from web enquiry to delivery. Sales and logistics finally share a single source of truth, quotes come from live pricing instead of a calculator, and inventory-aware picking removed the event-day scramble. Operational metrics — quote turnaround, panic-buy reduction, events per month — are still being measured, and are kept qualitative here until there are numbers I can stand behind."
+          }
+        ]
+      }
+    ]
   },
   {
     "type": "work",
@@ -58,7 +203,7 @@
   },
   {
     "type": "education",
-    "title": "Java Full Stack Bootcamp Cource",
+    "title": "Java Full Stack Bootcamp Course",
     "company": "SSangyong Institute of System Technology",
     "desc": "During this bootcamp, I gained a solid foundation in web development. I learned to build backend logic using Java and the Spring Framework, integrating databases with MyBatis and Oracle. On the frontend, I used JSP, jQuery, and Ajax to create dynamic and interactive user interfaces, along with Bootstrap for responsive design. The program also introduced me to deploying applications on AWS RDS and Heroku, while managing development environments with Apache Tomcat and Maven. This course provided a comprehensive understanding of the web development process, with a focus on traditional and widely-used technologies.",
     "stack": [
