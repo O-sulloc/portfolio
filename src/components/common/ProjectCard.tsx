@@ -13,20 +13,15 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({ thumb, title, desc, stackList, siteLink, githubLink }: ProjectCardProps) => {
+  // 라이브 사이트를 우선하고, 없으면 저장소로. 둘 다 없는 경우
+  // href=""인 앵커는 페이지를 새로고침해버리므로 감싸지 않습니다.
+  const thumbLink = siteLink || githubLink;
+  const thumbImg = <img src={thumb} className="project-thumb" alt={title} />;
+
   return (
     <div className="project-wrapper">
       <div className="project-content">
-        <div>
-          {siteLink ? (
-            <a href={siteLink}>
-              <img src={thumb} className="project-thumb" alt={title} />
-            </a>
-          ) : (
-            <a href={githubLink}>
-              <img src={thumb} className="project-thumb" alt={title} />
-            </a>
-          )}
-        </div>
+        <div>{thumbLink ? <a href={thumbLink}>{thumbImg}</a> : thumbImg}</div>
 
         <div className="project-body">
           <h3 className="project-title">{title}</h3>
