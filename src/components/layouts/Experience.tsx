@@ -2,6 +2,7 @@ import { useMemo } from 'react';
 import { VerticalTimeline } from 'react-vertical-timeline-component';
 import { useTheme } from '@mui/material/styles';
 import ExperienceCard from '../common/ExperienceCard';
+import { type CaseStudyData } from '../common/ExperienceCaseStudy';
 import { useTranslation } from 'react-i18next';
 import enExperience from '../../locales/en/experience.json';
 import koExperience from '../../locales/ko/experience.json';
@@ -34,6 +35,7 @@ const Experience = () => {
               desc={item.desc}
               stackList={item.stack}
               date={item.date}
+              caseStudies={(item as { caseStudies?: CaseStudyData[] }).caseStudies}
             />
           ))}
         </VerticalTimeline>

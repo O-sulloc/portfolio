@@ -22,12 +22,18 @@ const Home = () => {
           </div>
 
           <div className="home-brief">
-            <div className="title animate__animated animate__fadeInRight">
+            <div
+              className="title animate__animated animate__fadeInUp"
+              style={{ animationDelay: '0.2s' }}
+            >
               <p>{t('home:desc')}</p>
             </div>
 
-            <div className="image-wrapper animate__animated animate__fadeInUp">
-              <div className="social-icon animate__animated animate__fadeInDown">
+            <div
+              className="image-wrapper animate__animated animate__fadeInUp"
+              style={{ animationDelay: '0.35s' }}
+            >
+              <div className="social-icon">
                 <IconButton aria-label="github" href="https://github.com/O-sulloc">
                   <GitHub fontSize="large" />
                 </IconButton>
@@ -43,7 +49,10 @@ const Home = () => {
               <img src={me} className="home-image" alt={t('home:name')} />
             </div>
 
-            <div className="location animate__animated animate__fadeInLeft">
+            <div
+              className="location animate__animated animate__fadeInUp"
+              style={{ animationDelay: '0.5s' }}
+            >
               <p>{t('home:location')}</p>
             </div>
           </div>

@@ -8,7 +8,7 @@
   {
     "key": "front",
     "title": "Frontend Development",
-    "desc": "Experienced in SSR and CSR implementation for seamless user interaction and optimized performance. Proficient in Svelte and JavaScript, with commercial exposure, and experienced in developing reusable components using React. A solid understanding of JavaScript fundamentals and modern language features allows me to build responsive, accessible, and scalable front-end code with a strong emphasis on detail and usability. Recently delivered a complete website redesign using modern React ecosystem with advanced animations and SEO optimization.",
+    "desc": "Comfortable across SSR and CSR, building responsive, accessible interfaces from reusable components. Commercial experience with Svelte and React, backed by a solid grounding in modern JavaScript and TypeScript. Most recently I rebuilt an entire marketing site in the React ecosystem, pairing considered motion design with technical SEO and validated, accessible forms that measurably lifted conversions.",
     "stackList": [
       "JavaScript",
       "TypeScript",
@@ -20,25 +20,20 @@
       "Tailwind CSS",
       "Framer Motion",
       "GSAP",
-      "React Hook Form"
+      "React Hook Form",
+      "Zod"
     ]
   },
   {
     "key": "devOps",
     "title": "DevOps",
-    "desc": "Streamlined the development process through automation, continuous integration, and continuous delivery using industry-standard tools and platforms. Experienced in modern deployment platforms and performance monitoring tools for production applications.",
-    "stackList": [
-      "AWS",
-      "Docker",
-      "Kubernetes",
-      "Linux",
-      "Git",
-      "GitHub Actions",
-      "GitLab CI/CD",
-      "Vercel",
-      "Google Tag Manager",
-      "Vercel Analytics",
-      "Google Analytics"
-    ]
+    "desc": "Comfortable owning delivery end to end: containerised builds, CI/CD pipelines, and modern deployment platforms for production applications, with a focus on reliable, repeatable releases.",
+    "stackList": ["AWS", "Docker", "Kubernetes", "Linux", "Git", "GitHub Actions", "GitLab CI/CD", "Vercel"]
+  },
+  {
+    "key": "analytics",
+    "title": "Analytics & SEO",
+    "desc": "I treat measurement as part of building, not an afterthought. On my most recent project I instrumented a full conversion funnel, validated the numbers against server-side records when client analytics under-reported them, and grew organic search through technical SEO: structured data, redirects, sitemaps, and Core Web Vitals.",
+    "stackList": ["Google Analytics 4", "Google Tag Manager", "Search Console", "Vercel Analytics", "Vercel Speed Insights", "Structured Data (JSON-LD)", "Core Web Vitals"]
   }
 ]

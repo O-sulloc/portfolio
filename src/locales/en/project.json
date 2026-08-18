@@ -1,5 +1,23 @@
 [
   {
+    "image": "/assets/project/katherine-park.png",
+    "title": "Katherine Park & Co Ltd",
+    "desc": "A paid freelance commission for a UK-registered cross-border legal counsel practice, where I owned the whole engagement alone — requirements, design, build, deployment, and handover. Rather than styling page by page, I defined colour, typography, spacing, and elevation as Tailwind v4 @theme tokens first and built every section on top of them, so the site reads as one coherent premium brand instead of a set of unrelated templates. The hero pairs a rotating globe I wrote directly against the Canvas API with a world map pinning London, Dubai, and Seoul, so the cross-border positioning lands in the first screen rather than in a paragraph further down. Scroll reveals share a single IntersectionObserver across every element and unobserve themselves once fired, with a no-js fallback so content is never trapped invisible if JavaScript never runs, and prefers-reduced-motion is respected by never observing at all. On the accessibility side I added a skip link, aria-expanded/aria-controls on the mobile navigation, and visible focus states; on the distribution side, metadataBase, a dynamic OG image, canonical URLs, and a web manifest so shared links render properly and the site is indexable. The reading-progress bar at the top runs on a pure CSS scroll timeline with zero JavaScript.",
+    "stackList": [
+      "Next.js 16",
+      "React 19",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "Canvas API",
+      "react-simple-maps",
+      "SEO",
+      "PWA",
+      "Vercel"
+    ],
+    "siteLink": "https://katherineandco.uk/",
+    "githubLink": ""
+  },
+  {
     "image": "/assets/project/jns.png",
     "title": "Joseph & Stacey",
     "desc": "I developed and maintained the company's ERP and e-commerce websites using JavaScript, Svelte, Ruby, and PostgreSQL, which enhanced overall system functionality and reliability. My role involved collaborating with various departments to create tailored ERP solutions that improved operational efficiency using Agile methodologies and Scrum practices. I designed wireframes, created database schemas, and developed features in iterative sprints, accelerating delivery and optimizing team workflows. Additionally, I conducted comprehensive self-testing and troubleshooting for live issues, ensuring the system remained stable and user satisfaction was consistently achieved. I also worked closely with end-users to provide support and resolve technical issues, further enhancing the user experience. To facilitate a smoother onboarding process, I developed documentation to assist new team members in quickly integrating into the team and adapting to their roles.",

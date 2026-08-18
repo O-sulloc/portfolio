@@ -55,7 +55,7 @@ const ResponsiveNavBar = () => {
 
   return (
     <AppBar position="sticky" className="navigation-bar">
-      <Container maxWidth="xl">
+      <Container maxWidth="lg">
         <Toolbar disableGutters>
           {/* PC Navbar */}
           {/* icon */}

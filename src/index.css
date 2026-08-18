@@ -1,0 +1,48 @@
+/* 전역 본문/UI 기본 폰트 — 한글+라틴 통합 (Pretendard) */
+:root {
+  --font-sans:
+    'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
+    system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', sans-serif;
+
+  /* 타입 스케일 (rem 기반 모듈러 스케일 ~1.25) — 위계 리듬 통일 */
+  --fs-section-title: 2.5rem; /* 40px — 섹션 제목(Stack/Experience/...) */
+  --fs-card-title: 1.5rem; /* 24px — 스택/프로젝트 카드 제목 */
+  --fs-body: 1rem; /* 16px — 본문 */
+  --lh-tight: 1.15; /* 제목 행간 */
+  --lh-body: 1.6; /* 본문 행간 */
+
+  /* 레이아웃 — 콘텐츠 폭/여백 통일 (Navbar Container lg=1200 과 정렬) */
+  --content-max: 1200px; /* 콘텐츠 컬럼 최대 폭 */
+  --gutter: 24px; /* 좌우 거터 (MUI Container 기본값과 일치) */
+  --section-pad-y: 6rem; /* 섹션 상하 리듬 */
+
+  /* 색 토큰 — 단일 출처. (MUI theme/index.ts 의 값과 동기화 유지) */
+  --color-bg: whitesmoke; /* 페이지 배경 */
+  --color-surface: #f8f9fa; /* 카드/타임라인 표면 */
+  --color-text: #1a1a1a; /* 기본 텍스트 */
+  --color-text-muted: dimgray; /* 보조 텍스트 */
+  --color-border: #ccc; /* 인풋/구분선 */
+  --color-accent: #4f46e5; /* 인디고 — 주 액센트 (경력 아이콘) */
+  --color-accent-2: #0d9488; /* 티일 — 보조 액센트 (학력 아이콘) */
+  --color-accent-tint-1: #eef2ff; /* 액센트 옅은 틴트 (프로젝트 hover) */
+  --color-accent-tint-2: #f5f3ff; /* 액센트 옅은 틴트 2 */
+  --color-chat: #0b93f6; /* 컨택트 말풍선 (iMessage 메타포) */
+}
+
+/* 모바일에선 상하 리듬/거터 축소 */
+@media (max-width: 768px) {
+  :root {
+    --section-pad-y: 4rem;
+    --gutter: 20px;
+  }
+}
+
+body {
+  font-family: var(--font-sans);
+  background: var(--color-bg); /* Home.css 삭제로 유실됐던 배경 복구 */
+  color: var(--color-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-break: keep-all; /* 한글 단어 단위 줄바꿈 */
+}

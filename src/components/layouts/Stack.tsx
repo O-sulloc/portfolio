@@ -1,12 +1,12 @@
 import { useMemo } from 'react';
 import StackCard from '../common/StackCard';
-import { faJs, faAws, faJava } from '@fortawesome/free-brands-svg-icons';
+import { faJs, faAws, faJava, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { useTranslation } from 'react-i18next';
 import enStack from '../../locales/en/stack.json';
 import koStack from '../../locales/ko/stack.json';
 
-const iconMap: Record<string, IconDefinition> = { backend: faJava, front: faJs, devOps: faAws };
+const iconMap: Record<string, IconDefinition> = { backend: faJava, front: faJs, devOps: faAws, analytics: faGoogle };
 
 const Stack = () => {
   const { t, i18n } = useTranslation();
